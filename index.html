@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="D1VS - FluxWallet.me">
+        <meta name="author" content="FluxWallet.me">
+        <title>D1VS | FluxWallet.me</title>
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/arcadium-fx.css">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="wallpaper">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /> Arcadium Network</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://fluxwallet.me" target="_blank">FluxWallet.me</a></li>
+                </ul>
+              
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-white" href="#">
+                            <b>Game Balance: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX</span></b>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-white" href="#">
+                            <b>Current Supply: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="content" class="container">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="card glassPanel rcAll text-white animated fadeInUp delay-3s">
+                                <div class="card-body text-white">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="display-5 text-white">
+                                                    <img src="assets/img/logo.png" width="50px" />
+                                                    <span class="user-token-balance text-success">0.00</span> D1VS
+                                                </h2>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <h2 class="display-5 text-white">
+                                                    <img src="assets/img/tron.png" width="50px" />
+                                                    <span class="user-trx-balance text-danger">0.00</span> TRX
+                                                </h2>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <h2 class="display-5 text-white">
+                                                    <img src="assets/img/dollar.png" width="50px" />
+                                                    <span class="user-usd-balance text-white">0.00</span> USD
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-white">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button type="button" class="btn btn-block btn-sm btn-success btn-outline-dark rcAll text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound (+<span id="user-reinvest">0.00</span> D1VS ($<span id="user-dividends-usd">0.00</span> USD))</button>
+                                        </div>
+                                                
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-sm btn-danger btn-outline-dark rcAll text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw <span class="user-dividends">0.00000000</span> TRX</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            
+            <!-- Buy & Sell Cards -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card glassPanel rcAll text-white animated fadeInLeft delay-2s">
+                        <div class="card-header text-white">Buy D1VS</div>
+                        <div class="card-body text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <small class="text-white">Current Price</small>
+                                        <h2 class="text-success">
+                                            <img src="assets/img/logo.png" width="40px" />
+                                            <span id="rate-to-buy">0</span> TRX
+                                        </h2>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control rcAll buy-input" placeholder="TRX to Spend" /><br />
+                                    <input type="text" class="form-control bg-dark text-success rcAll token-input-buy" readonly="" value="0.00000000">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-success btn-block rcAll btn-buy buy-token-button">Buy D1VS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card glassPanel rcAll text-white animated fadeInUp delay-3s">
+                        <div class="card-header text-white">Referrals</div>
+                        <div class="card-body text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h3 class="text-white">Here&apos;s your Link</h3>
+                                        <input id="ref-url" class="form-control rcAll bg-dark text-info" value="" readonly="" />
+                                        <small class="text-white">When others use it to buy in, you get a bonus!</small>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white"></div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card glassPanel rcAll text-white animated fadeInRight delay-2s">
+                        <div class="card-header text-white">Sell D1VS</div>
+                        <div class="card-body text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <small class="text-white">Current Value</small>
+                                        <h2 class="text-danger">
+                                            <img src="assets/img/logo.png" width="40px" />
+                                            <span id="rate-to-sell">0</span> TRX
+                                        </h2>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control rcAll sell-input" placeholder="D1VS to Sell" /><br />
+                                        <input type="text" class="form-control bg-dark text-danger rcAll token-input-sell" readonly="" value="0.00000000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-danger btn-block rcAll btn-sell sell-token-button">Sell D1VS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+                    
+            <div class="row">
+                
+            </div>
+            <br />
+                    
+            <footer class="py-5 px-5 glassPanel rcAll text-white">
+                <div class="row">
+                    <div class="col text-center">
+                        <b>The Fine Print</b>
+                        <small class="d-block mb-3 text-muted">
+                            This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                            Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
+                            Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
+                        </small>
+                    </div>
+                </div>
+            </footer>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        
+        <script src="assets/lib/hourglass.trx.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+        
+        <script type="text/javascript">
+			function getCookie(name) {
+				var dc = document.cookie;
+				var prefix = name + "=";
+				var begin = dc.indexOf("; " + prefix);
+
+				if (begin == -1) {
+				  begin = dc.indexOf(prefix);
+				  if (begin != 0) return null;
+				}
+				else
+				{
+					begin += 2;
+					var end = document.cookie.indexOf(";", begin);
+					if (end == -1) {
+					end = dc.length;
+				  }
+				}
+
+				return decodeURI(dc.substring(begin + prefix.length, end));
+			}
+
+			var url_string = window.location.href;
+			var url = new URL(url_string);
+			var theCookie = "masternode=" + url.searchParams.get("masternode");
+
+			if (url.searchParams.get("masternode") !== null) {
+			  var toSet = "masternode=" + url.searchParams.get("masternode");
+			  document.cookie=theCookie;
+			} else {
+
+			  var refCookie = getCookie("masternode");
+
+			  if (refCookie === null) {
+				console.log("Ref cookie was null. Setting to default.");
+				document.cookie = "masternode=TEbqdbZdW18jXSa8cZbdb2BysNa8sKMuKP";
+			  } else {
+				// do nothing if the cookie is already set and there is no new mnode link
+			  }
+			}
+		</script>
+    </body>
+</html>
