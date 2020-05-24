@@ -47,16 +47,6 @@
                             <b><i class="fas fa-info-circle text-primary"></i> HOW TO PLAY</b>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled text-white" href="#">
-                            <b>Game Balance: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX</span></b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled text-white" href="#">
-                            <b>Current Supply: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -99,13 +89,13 @@
                                 
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-sm btn-dark btn-outline-success rcAll text-white" data-toggle="modal" data-target="#buyModal">
+                                        <button type="button" class="btn btn-block btn-sm btn-success btn-outline-dark rcAll text-white" data-toggle="modal" data-target="#buyModal">
                                             <i class="fas fa-dollar-sign"></i> Buy D1VS
                                         </button>
                                     </div>
                                                 
                                     <div class="col text-center">
-                                        <button class="btn btn-block btn-sm btn-dark btn-outline-danger rcAll text-white" data-toggle="modal" data-target="#sellModal">
+                                        <button class="btn btn-block btn-sm btn-danger btn-outline-dark rcAll text-white" data-toggle="modal" data-target="#sellModal">
                                             <i class="fas fa-dollar-sign"></i> Sell D1VS
                                         </button>
                                     </div>
@@ -163,10 +153,131 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card glassPanel rcAll">
+                                <div class="card-header  text-white text-center">
+                                    <b>Game Balance: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX</span></b>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card glassPanel rcAll">
+                                <div class="card-header  text-white text-center">
+                                    <b>Current Supply: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br />
-            <br />
+            <div class="row">
+                <div class="col text-center">
+                        <div class="accordion" id="accordionExample">
+                        <div class="card glassPanel rcTop">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0 text-white">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <b class="text-white">What is Arcadium D1VS?</b>
+                                    </button>
+                                </h3>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col text-center">
+                                                <p class="text-white text-center">
+                                                    Arcadium D1VS is an Hourglass-style game, where players can buy and sell D1VS.<br />
+                                                    As D1VS are purchased, the price of them incrementally rises, and as they're sold, the price incrementally falls.<br />
+                                                    <br />
+                                                    <b>10% of every Deposit and Withdrawal</b> is collected as a &quot;Stability Fee&quot; for the game.<br />
+                                                    These fees make up the <i>Dividends</i> that you earn, as others play the game.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <b class="text-white">How does it Work?</b>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p class="text-white text-center">
+                                        When you hold D1VS, you are automatically earning <i>Dividends</i> from other players who are buying and selling D1VS also.<br />
+                                        Whenever you&apos;d like, you can <b>Compound</b> your Dividends, which will get your more D1VS!<br />
+                                        You can also <b>Withdraw</b> your Dividends as TRX, straight to your wallet.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <b class="text-white">How do I earn more D1VS?</b>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white text-center">
+                                                    The best way to earn more D1VS is to Compound the Dividends you earn from others, and to <i>Refer others to join in</i>!<br />
+                                                    If you click on &quot;Referrals&quot; in the Game Menu, you will be able to share your Referral Link.<br />
+                                                    When others use it to buy D1VS, you get a bonus!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel rcBottom">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <b class="text-white">Ready to Stop?</b>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center text-white">
+                                                <p>
+                                                    If you no longer wish to play Arcadium D1VS, that is 100% okay!<br />
+                                                    All you have to do is sell all of your D1VS, then <b>Withdraw them from your Dividends</b>.<br />
+                                                    You will receive the resulting TRX in your wallet, and you&apos;re free to go!
+                                                </p>
+                                                <br />
+                                                <b class="text-white"><i>Thanks for Playing Arcadium D1VS!</i></b>
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+            </div>
             <br />
             <br />
             <br />
