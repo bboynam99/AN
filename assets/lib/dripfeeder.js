@@ -64,7 +64,7 @@ function updateUserInformation() {
     }).catch((_0x45f9x8) => {
         console.log(_0x45f9x8)
     });
-    $("#ref-url").val("https://arcadium.network/daily.html?masternode=" + tronWeb.defaultAddress.base58)
+    $("#reflink").val("https://arcadium.network/daily.html?masternode=" + tronWeb.defaultAddress.base58)
 }
 
 function checkwallet() {

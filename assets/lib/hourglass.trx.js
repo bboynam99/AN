@@ -16,13 +16,6 @@ async function loadTronWeb(){
 window.addEventListener("load",function() {
     loadTronWeb();
     
-    new ClipboardJS('.copyButton')
-
-    $('.copyButton').on('click', function (){
-        var address = document.getElementById("myCropAddress")
-        alertify.success('<h3>Copied Referral Link</h3>', 2)
-    });
-    
     // buy input
     $(".buy-input").change(function(){
         var txValue=$(this).val();
@@ -135,7 +128,7 @@ function updateUserInformation(){
             $("#user-reinvest").html(formatTrxValue(_0xbc13x1c))
         }).catch((error)=>{console.log(error)})
     }).catch((error)=>{console.log(error)});
-    $("#ref-url").val("https://arcadium.network/divs.html?masternode=" + tronWeb.defaultAddress.base58)
+    $("#reflink").val("https://arcadium.network/divs.html?masternode=" + tronWeb.defaultAddress.base58)
 }
 
 function checkwallet(){
