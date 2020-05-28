@@ -103,6 +103,9 @@
                                         <div class="col text-center">
                                             <button class="btn btn-block btn-md btn-success rcAll invest-button">Invest</button>
                                         </div>
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-info rcAll" data-toggle="modal" data-target="#guideModal">How to Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -216,6 +219,59 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Guide Modal -->
+        <div class="modal" id="guideModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark rcAll">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">How to Play</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3 class="text-white">1: <span class="text-success">Invest TRX</span></h3>
+                                    <p class="text-white">
+                                        When you add TRX to the smart contract (Pool), your Total Investment will increase.
+                                        Every 24 hours you will be able to withdraw 3&#37; of that total, until the Pool is empty! Watch out - another whale might eat your TRX! Invest carefully!
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">2: <span class="text-primary">Refer Others</span></h3>
+                                    <p class="text-white">
+                                        Once you have some TRX in the Pool, you will probably want to have some friends join you. Arcadium Daily makes this easy - simply click &quot;Referral Link&quot;, and every time someone uses your link to play, you get <b>5% of their deposit!</b>
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">3: <span class="text-warning">???</span></h3>
+                                    <p class="text-white">
+                                        ???
+                                    </p>
+                                    <hr />
+                                    <h3 class="text-white">4: <span class="text-danger">PROFIT!</span></h3>
+                                    <p class="text-white">
+                                        So long as there is TRX in the Pool, you can keep withdrawing 3% of your Total Investment every 24 hours! Refer more pople, and the TRX keeps flowing - you might even make it beyond ROI! Soon, Arcadium will be looking for more ways to feed the Pool, so it becomes fairer and more beneficial for everyone.<br />
+                                        <br />
+                                        <b class="text-danger">BE WARNED: Daily is a game with a more significant risk factor than D1VS - Heed the fine print in the footer of this page, and play with caution!</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
         
         <!-- Bootstrap core JavaScript -->
         <script src="assets/js/jquery.min.js"></script>

@@ -85,7 +85,7 @@ function sunToDisplay(_0x45f9x12) {
 }
 
 function formatTrxValue(_0x45f9x14) {
-    return parseFloat(parseFloat(_0x45f9x14).toFixed(2))
+    return parseFloat(parseFloat(_0x45f9x14).toFixed(6))
 }
 
 function getQueryVariable(_0x45f9x16) {
