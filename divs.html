@@ -18,9 +18,6 @@
     <body class="wallpaper">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
             <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
@@ -35,7 +32,9 @@
                         </a>
                     </li>
                 </ul>
-              
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
@@ -44,6 +43,17 @@
                     </li>
                 </ul>
             </div>
+            <br />
+            <div class="nav-item mr-auto">
+                        <span class="text-white"><b>Vault: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX&nbsp;</span></b>
+                        </span>
+
+                        <span class="text-white"><b>Tokens: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
+                        </span>
+                    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </nav>
         
         <div id="content" class="container">
@@ -54,10 +64,58 @@
             <div class="row">
                 <div class="container">
                     <div class="row jumbotron glassPanel rcAll">
-                        <div class="col text-center">
-                            <h1 class="text-white">Arcadium D1VS</h1>
+                        <div class="row text-center">
+                        <div class="col-md-12 text-center">
+                            <h1 class="text-white"><img src="assets/img/logo.png" width="60px" /> Arcadium D1VS</h1>
                             <p class="text-muted"><i>Hourglass-style Game on TRON</i></p>
                         </div>
+                        
+                
+
+
+                        <div class="col-md-4 text-left">
+
+
+                                    <div class="col text-center">
+                                        <h5 class="text-white">1. <span class="text-danger">Buy D1VS</span></h5>
+                                        <p class="text-muted"><i>Make sure you fill your bags!</i></p>
+                                    </div>
+
+
+
+                        </div>
+
+                    
+
+                        <div class="col-md-4 text-center">
+
+
+                                    <div class="col text-center">
+                                        <h5 class="text-white">2. <span class="text-warning">Refer Others</span></h5>
+                                        <p class="text-muted"><i>Bring your friends, it&apos;s a party!</i></p>
+                                    </div>
+
+
+
+                        </div>
+
+                    
+
+                        <div class="col-md-4 text-right">
+
+
+                                    <div class="col text-center">
+                                        <h5 class="text-white">3. <span class="text-success">Get D1VS!</span></h5>
+                                        <p class="text-muted"><i>You gotta get paid for your work!</i></p>
+                                    </div>
+
+
+
+                        </div>
+
+
+                        </div>
+                        
                     </div>
                     
                     <div class="row">
@@ -149,186 +207,25 @@
                     </div>
                     
                     <div class="row">
-                        <div class="col-md-6 text-center">
-                            <div class="card-header bg-warning rcAll">
-                                <p class="mb-0 text-white"><b>WARNING!</b> This game is fun but RISKY - only play if you can afford to lose!</p>
-                            </div>
-                            <br />
-                        </div>
-                        
-                        <div class="col-md-6 text-center">
-                            <button class="btn btn-block btn-lg btn-info rcAll" data-toggle="modal" data-target="#referralsModal">Get Referral Link</button>
-                            <br />
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card glassPanel rcAll">
-                                <div class="card-header  text-white text-center">
-                                    <b>Game Balance: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX</span></b>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="card glassPanel rcAll">
-                                <div class="card-header  text-white text-center">
-                                    <b>Current Supply: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 text-center">
-                        <div class="accordion" id="accordionExample">
-                        <div class="card glassPanel rcTop">
-                            <div class="card-header" id="headingOne">
-                                <h3 class="mb-0 text-white">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <h4 class="text-white">What is Arcadium D1VS?</h4>
-                                    </button>
-                                </h3>
-                            </div>
+                        <div class="col-md-3 text-center">
+                                <p class="mb-0 text-white"><button class="btn btn-block btn-lg btn-primary rcAll text-white" data-toggle="modal" data-target="#faqModal" aria-hidden="true"><i class="fas fa-info"></i> F.A.Q</button></p>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col text-center">
-                                                <p class="text-white text-center">
-                                                    Arcadium D1VS is an Hourglass-style game. As players <span class="text-success">buy</span> and <span class="text-danger">sell</span> D1VS, the price and value incrementally rises and falls.<br />
-                                                    <br />
-                                                    <b>10% of every Deposit and Withdrawal</b> is collected as a &quot;Stability Fee&quot; which makes up the <i>Dividends</i> that players earn, as D1VS are bought and sold.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <br />
                         </div>
-                        <div class="card glassPanel">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <h4 class="text-white">How does it Work?</h4>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p class="text-white text-center">
-                                        When you hold D1VS, you are automatically earning <i>Dividends</i> from other players who are buying and selling D1VS also.<br />
-                                        Whenever you&apos;d like, you can <b>Compound</b> your Dividends, which will get your more D1VS!<br />
-                                        You can also <b>Withdraw</b> your Dividends as TRX, straight to your wallet.
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="col-md-3 text-center">
+                                <p class="mb-0 text-white"><button class="btn btn-block btn-lg btn-secondary rcAll text-white" data-toggle="modal" data-target="#guideModal" aria-hidden="true"><i class="fas fa-gamepad"></i> How to Play</button></p>
+
+                            <br />
                         </div>
-                        <div class="card glassPanel">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h4 class="text-white">How do I earn more D1VS?</h4>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col text-center">
-                                                <p class="text-white text-center">
-                                                    The best way to earn more D1VS is to Compound the Dividends you earn from others, and to <i>Refer others to join in</i>!<br />
-                                                    If you click on &quot;Referrals&quot; in the Game Menu, you will be able to share your Referral Link.<br />
-                                                    When others use it to buy D1VS, you get a bonus!
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card glassPanel rcBottom">
-                            <div class="card-header" id="headingFour">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h4 class="text-white">Ready to Stop?</h4>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col text-center text-white">
-                                                <p>
-                                                    If you no longer wish to play Arcadium D1VS, that is 100% okay!<br />
-                                                    All you have to do is sell all of your D1VS, then <b>Withdraw them from your Dividends</b>.<br />
-                                                    You will receive the resulting TRX in your wallet, and you&apos;re free to go!
-                                                </p>
-                                                <br />
-                                                <b class="text-white"><i>Thanks for Playing Arcadium D1VS!</i></b>
-                                            </div>
-                                        </div>
-                                        <br />
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
-                <div class="col-md-6 text-center">
-                    <div class="row">
-                        <div class="col text-left">
-                            <div class="card-body glassPanel rcAll">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white">1. <span class="text-danger">Buy D1VS</span></h3>
-                                        <p class="text-muted"><i>Make sure you fill your bags!</i></p>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                        <div class="col-md-6 text-center">
+                            <button class="btn btn-block btn-lg btn-info rcAll text-white" data-toggle="modal" data-target="#referralsModal">Copy Referral Link</button>
                             <br />
                         </div>
                     </div>
                     
-                    <div class="row">
-                        <div class="col text-center">
-                            <div class="card-body glassPanel rcAll">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white">2. <span class="text-warning">Refer Others</span></h3>
-                                        <p class="text-muted"><i>Bring your friends, it&apos;s a party!</i></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col text-right">
-                            <div class="card-body glassPanel rcAll">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white">3. <span class="text-success">Get D1VS!</span></h3>
-                                        <p class="text-muted"><i>You gotta get paid for your work!</i></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                    </div>
-                    <br />
                 </div>
             </div>
-            <br />
             
             <div class="row">
                 <div class="col text-center">
@@ -354,6 +251,127 @@
         </footer>
         
         <!-- Modals -->
+        <div class="modal" id="faqModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark rcAll">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">F.A.Q</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="containter">
+                            <div class="row">
+                <div class="col text-center">
+                        <div class="accordion" id="accordionExample">
+                        <div class="card glassPanel rcTop">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0 text-white">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="text-white">What is Arcadium D1VS?</h4>
+                                    </button>
+                                </h3>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col text-center">
+                                                <p class="text-white text-justify">
+                                                    Arcadium D1VS is an Hourglass-style game. As players <span class="text-success">buy</span> and <span class="text-danger">sell</span> D1VS, the price and value incrementally rises and falls.<br />
+                                                    <br />
+                                                    <b>10% of every Deposit and Withdrawal</b> is collected as a &quot;Stability Fee&quot; which makes up the <i>Dividends</i> that players earn, as D1VS are bought and sold.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h4 class="text-white">How does it Work?</h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p class="text-white text-justify">
+                                        When you hold D1VS, you are automatically earning <i>Dividends</i> from other players who are buying and selling D1VS also.<br />
+                                        Whenever you&apos;d like, you can <b>Compound</b> your Dividends, which will get your more D1VS!<br />
+                                        You can also <b>Withdraw</b> your Dividends as TRX, straight to your wallet.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h4 class="text-white">How do I earn more D1VS?</h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white text-justify">
+                                                    The best way to earn more D1VS is to Compound the Dividends you earn from others, and to <i>Refer others to join in</i>!<br />
+                                                    If you click on &quot;Referrals&quot; in the Game Menu, you will be able to share your Referral Link.<br />
+                                                    When others use it to buy D1VS, you get a bonus!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel rcBottom">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <h4 class="text-white">Ready to Stop?</h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-white text-justify">
+                                                <p>
+                                                    If you no longer wish to play Arcadium D1VS, that is 100% okay!<br />
+                                                    All you have to do is sell all of your D1VS, then <b>Withdraw them from your Dividends</b>.<br />
+                                                    You will receive the resulting TRX in your wallet, and you&apos;re free to go!
+                                                </p>
+                                                <br />
+                                                <b class="text-white"><i>Thanks for Playing Arcadium D1VS!</i></b>
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Buy Modal -->
         <div class="modal" id="buyModal">
             <div class="modal-dialog">
@@ -502,26 +520,81 @@
                     <div class="modal-body">
                         <div class="container">
                             <div class="row">
-                                <div class="col text-left">
-                                    <h3 class="text-white">1: <span class="text-success">Buy D1VS</span></h3>
-                                    <p class="text-white">
+                                <div class="col text-center">
+                                    <div class="accordion" id="howtoAccordion">
+                        <div class="card glassPanel rcTop">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0 text-white">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="text-white text-center">1: <span class="text-success">Buy D1VS</span></h4>
+                                    </button>
+                                </h3>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="text-white text-justify">
                                         When you buy D1VS with TRX, a 10% fee is applied to your deposit. The same applies for every other player, on every deposit. This fee makes up part of the &quot;Dividends&quot; which are paid to those who already hold D1VS. As this goes, once you hold D1VS, you too will earn Dividends from other people depositing TRX!
                                     </p>
-                                    <hr />
-                                    <h3 class="text-white">2: <span class="text-primary">Refer Others</span></h3>
-                                    <p class="text-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h4 class="text-white text-center">2: <span class="text-primary">Refer Others</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <p class="text-white text-justify">
                                         As soon as you have some D1VS, you can use your Referral Link to bring others into the game. When they use your link, you get a bonus to your Dividends! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide!
                                     </p>
-                                    <hr />
-                                    <h3 class="text-white">3: <span class="text-warning">Compound D1VS</span></h3>
-                                    <p class="text-white">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h4 class="text-white text-center">3: <span class="text-warning">Compound D1VS</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                                <p class="text-white text-justify">
                                         Once you have a good bag of D1VS, you&apos;ll want to start Compounding your Dividends - that is, rolling them into more D1VS. This will have the effect of growing the size of your <i>&quot;portion of the pie&quot;</i>, thus earning more Dividends, faster!
                                     </p>
-                                    <hr />
-                                    <h3 class="text-white">4: <span class="text-danger">Sell D1VS</span></h3>
-                                    <p class="text-white">
-                                        When it all falls apart on you - when you can&apos;t HODL your D1VS anymore, it&apos;s okay to <b>SELL</b> them! When you do, you will receive TRX to withdraw. The sale of D1VS is also subject to a 10% fee, which also makes up part of the &quot;Dividends&quot; paid to those who still hold D1VS!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel rcBottom">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <h4 class="text-white text-center">4: <span class="text-danger">Sell D1VS</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                                <p class="text-white text-justify">
+                                        When it all falls apart on you - when you can&apos;t HODL your D1VS anymore, it&apos;s okay to <b>SELL</b> them! When you do, you will receive TRX to withdraw. The sale of D1VS is also subject to a 10% fee, which also makes up part of the &quot;Dividends&quot; paid to those who still hold D1VS.
                                     </p>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                                 </div>
                             </div>
                         </div>
