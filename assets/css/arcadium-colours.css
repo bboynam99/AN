@@ -2,6 +2,10 @@
     background-color: #ff004e;
 }
 
+.arcSilver {
+    background-color: #b4b4b4;
+}
+
 .arcBlue {
     background-color: #009dff;
 }
@@ -18,6 +22,10 @@
     border: solid #ff004e;
 }
 
+.silverBorder {
+    border: solid #b4b4b4;
+}
+
 .blueBorder {
     border: solid #009dff;
 }
@@ -28,4 +36,8 @@
 
 .yellowBorder {
     border: solid #fff500;
+}
+
+.whiteBorder {
+    border: solid #ffffff;
 }

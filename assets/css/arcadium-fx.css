@@ -13,6 +13,31 @@ html, body {
     background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(89,0,255,1) 8%, rgba(0,0,0,1) 100%);
 }
 
+.wallpaperGreen {
+    background: rgb(33,33,33);
+    background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(0,180,10,1) 8%, rgba(0,16,27,1) 100%);
+}
+
+.wallpaperYellow {
+    background: rgb(33,33,33);
+    background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(180,161,0,1) 8%, rgba(0,16,27,1) 100%);
+}
+
+.wallpaperRed {
+    background: rgb(33,33,33);
+    background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(180,0,0,1) 8%, rgba(0,16,27,1) 100%);
+}
+
+.wallpaperDark {
+    background: rgb(33,33,33);
+    background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(91,91,91,1) 8%, rgba(0,16,27,1) 100%);
+}
+
+.wallpaperOcean {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(6,185,235,1) 92%, rgba(0,212,255,1) 100%);
+}
+
 /* Sidebar */
 #sidebar-wrapper {
     min-height: 100vh;

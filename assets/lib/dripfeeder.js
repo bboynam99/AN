@@ -34,6 +34,8 @@ window.addEventListener("load", function() {
             console.log(_0x45f9x8)
         })
     })
+    
+    
 });
 
 function startLoop() {
@@ -44,11 +46,13 @@ function startLoop() {
 function refreshData() {updateUserInformation()}
 
 function updateUserInformation() {
-    dripFeederContract.checkInvestments(tronWeb.defaultAddress.base58).call().then((_0x45f9x9) => {
-        var _0x45f9xd = sunToDisplay(parseInt(_0x45f9x9));
-        $("#your-invest").html(_0x45f9xd)
-    }).catch((_0x45f9x8) => {
-        console.log(_0x45f9x8)
+    dripFeederContract.checkInvestments(tronWeb.defaultAddress.base58).call().then((result) => {
+        var userEarnRate = sunToDisplay(parseInt(result / 30)).toFixed(2);
+        var userInvestments = sunToDisplay(parseInt(result));
+        $("#your-invest").html(userInvestments)
+        $("#your-earn-rate").html(userEarnRate)
+    }).catch((err) => {
+        console.log(err)
     });
     
     dripFeederContract.getDividends(tronWeb.defaultAddress.base58).call().then((_0x45f9x9) => {
@@ -64,6 +68,7 @@ function updateUserInformation() {
     }).catch((_0x45f9x8) => {
         console.log(_0x45f9x8)
     });
+
     $("#reflink").val("https://arcadium.network/daily.html?masternode=" + tronWeb.defaultAddress.base58)
 }
 

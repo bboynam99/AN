@@ -7,6 +7,8 @@
         <meta name="author" content="Arcadium Network">
         <title>DAILY | Arcadium Network</title>
 
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        
         <!-- Core CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/arcadium-fx.css">
@@ -18,9 +20,6 @@
     <body class="wallpaper">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
             <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
@@ -29,19 +28,23 @@
                             <b><i class="fas fa-chart-line text-danger"></i> D1VS</b>
                         </a>
                     </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="bttx.html">
+                            <b><i class="fas fa-dice-d6 text-warning"></i> BTTX</b>
+                        </a>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link text-white" href="flipper.html">
                             <b><i class="fas fa-coins" style="color: #ffff00;"></i> FLIPPER</b>
                         </a>
                     </li>
                 </ul>
-              
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://t.me/ArcadiumNetwork" target="_blank">
-                            <b><i class="fab fa-telegram text-primary"></i> TELEGRAM</b>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="https://discord.gg/ztNcbm3" target="_blank">
                             <b><i class="fab fa-discord text-info"></i> JOIN OUR DISCORD</b>
@@ -49,8 +52,11 @@
                     </li>
                 </ul>
             </div>
+                        
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </nav>
-        
         
         <div id="content" class="container">
             <br />
@@ -59,7 +65,7 @@
             <br />
             <div class="row">
                 <div class="container">
-                    <div class="row jumbotron glassPanel roundedCorners">
+                    <div class="row jumbotron glassPanel roundedCorners" style="border: solid #0099ea;">
                         <div class="col text-center">
                             <h1 class="text-white"><i class="fas fa-tint text-primary"></i> Arcadium Daily</h1>
                             <p class="text-muted"><i>3&#37; every 24 hours, till it all runs out!</i></p>
@@ -70,7 +76,8 @@
                         <div class="col-md-6">
                             <div class="card glassPanel roundedCorners">
                                 <div class="card-header  text-white text-center">
-                                    <b>Your total invested: <span id="your-invest" class="text-danger">0</span> TRX</b>
+                                    <b>Your total invested: <span id="your-invest" class="text-danger">0</span> TRX</b><br />
+                                    <b>Estimated Earn Rate: <span id="your-earn-rate" class="text-success">0</span> TRX / 24 Hrs</b><br />
                                 </div>
                             </div>
                             <br />
@@ -79,7 +86,8 @@
                         <div class="col-md-6">
                             <div class="card glassPanel roundedCorners">
                                 <div class="card-header  text-white text-center">
-                                    <b>Your Referrer: <span id="your-inviter">n/a</span></b>
+                                    <b>Your Referrer: <span id="your-inviter">n/a</span></b><br />
+                                    <i>Earn 5&#37; of TRX deposited with your Refferal Link!</i>
                                 </div>
                             </div>
                             <br />
@@ -107,10 +115,10 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col text-center">
-                                            <button class="btn btn-block btn-md btn-success roundedCorners invest-button"><i class="fas fa-funnel-dollar"></i> Invest</button>
+                                            <button class="btn btn-block btn-md btn-success roundedCorners invest-button"><i class="fas fa-funnel-dollar" aria-hidden="true"></i> Invest</button>
                                         </div>
                                         <div class="col text-center">
-                                            <button class="btn btn-block btn-info roundedCorners" data-toggle="modal" data-target="#guideModal"><i class="fas fa-gamepad"></i> How to Play</button>
+                                            <button class="btn btn-block btn-info roundedCorners" data-toggle="modal" data-target="#referralsModal"><i class="fas fa-users" aria-hidden="true"></i> Referral Link</button>
                                         </div>
                                     </div>
                                 </div>
@@ -136,11 +144,12 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col text-center">
-                                            <button class="btn btn-block btn-danger roundedCorners withdraw-button"><i class="fas fa-hand-holding-usd"></i> Withdraw Dividends</button>
+                                            <button class="btn btn-block btn-primary roundedCorners" data-toggle="modal" data-target="#guideModal"><i class="fas fa-gamepad" aria-hidden="true"></i> How to Play</button>
                                         </div>
                                         <div class="col text-center">
-                                            <button class="btn btn-block btn-warning roundedCorners" data-toggle="modal" data-target="#referralsModal"><i class="fas fa-users"></i> Referral Link</button>
+                                            <button class="btn btn-block btn-secondary btn-outline-warning roundedCorners withdraw-button text-white"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> Withdraw</button>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
