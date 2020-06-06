@@ -1,2 +1,2 @@
-# Arcadium-C3T
-C3T | Hourglass-style Game on TRON
+# Arcadium Network
+Arcadium Network | Dapp and Game Platform built on TRON
