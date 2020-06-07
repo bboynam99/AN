@@ -70,105 +70,18 @@
                 <div class="container">
                     <div class="row jumbotron glassPanel whiteBorder roundedCorners">
                         <div class="col text-center">
-                            <h1 class="text-white">Arcadium Network</h1>
+                            <h1 class="text-white">ArcBank is <span id="operationStatus"></span></h1>
                             <p class="text-white">
-                                <b>Bank Holdings: <span class="text-danger"><span id="trx-balance">0</span> TRX</span> | <span class="text-success"><span id="tkn-balance">0</span> USDJ</span></b></p>
+                                <b>Bank Holdings: <span class="text-danger"><span id="trx-balance">0</span> TRX</span> | <span class="text-primary"><span id="tkn-balance">0</span> USDJ</span></b><br />
+                                <b>Liquidity over Lifetime: <span class="text-white"><span id="liquidityContributed"></span> USD in</span> | <span class="text-white"><span id="returnsPaid"></span> USD out</span></b><br />
+                                <b>Profit Margin: <span id="fee-percentage"></span></b>
+                            </p>
                             <p><span id="tx-readout"></span></p>
+                            <button type="button" class="btn btn-block btn-sm btn-info text-white roundedCorners" onclick="withdrawTRX()">Toggle Bank</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card glassPanel roundedCorners">
-                        <div class="card-header text-white">Liquidity Contributed</div>
-                        <div class="card-body text-white">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white"><span id="liquidityContributed"></span> USD</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-white">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <a class="btn btn-block btn-sm btn-success roundedCorners" href="#">Add Liquidity</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card glassPanel roundedCorners">
-                        <div class="card-header text-white">Withdrawn to Wallet</div>
-                        <div class="card-body text-white">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white"><span id="returnsPaid"></span> USD</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-white">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <a class="btn btn-block btn-sm btn-danger roundedCorners" href="#">Remove Liquidity</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card glassPanel roundedCorners">
-                        <div class="card-header text-white">Profit Margin</div>
-                        <div class="card-body text-white">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white"><span id="fee-percentage"></span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-white">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <a class="btn btn-block btn-sm btn-warning roundedCorners" href="#">Change Percentage</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card glassPanel roundedCorners">
-                        <div class="card-header text-white">Operation Status</div>
-                        <div class="card-body text-white">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h3 class="text-white"><span id="operationStatus"></span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-white">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button type="button" class="btn btn-block btn-sm btn-info text-white roundedCorners" onclick="withdrawTRX()">Toggle Bank</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br />
             
             <div class="row">
                 <div class="col-md-6">
