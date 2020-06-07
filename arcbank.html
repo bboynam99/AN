@@ -77,15 +77,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Beta Warning Row -->
-            <div class="row">
-                <div class="col text-center">
-                    <div class="alert alert-dismissible arcRed text-dark roundedCorners">
-                        <b class="text-white">ARCBANK is in Beta - Please Trade Carefully! Developers are not responsible for market volatility!</b>
-                    </div>
-                </div>
-            </div>
-            <br />
             <!-- Main Bank Row -->
             <div id="bank" class="row">
                 <div class="col text-center">
@@ -130,27 +121,49 @@
                                 
                                 <div class="row">
                                     <div class="col text-left">
-                                        <h2 class="text-success"><b>Buy USDJ</b></h2>
-                                        <span class="text-white"><i>(<span class="ourBuyRate"></span> USDJ / 1 TRX)</i></span><br />
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="text-success"><b>Buy USDJ</b></h2>
+                                                <span class="text-white"><i>(<span class="ourBuyRate"></span> USDJ / 1 TRX)</i></span><br />
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Send TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyTrx" placeholder="100" value="100" maxlength="32" onkeyup="updateBankBuy(0)" onkeydown="updateBankBuy(0)" autocomplete="off" inputmode="numeric">
+                                                <p class="text-white">Minimum <span class="text-danger">100 TRX</span> Required!</p>
+                                            </div>
+                                            
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Receive USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyUSDJ" placeholder="10" value="10" maxlength="32" onkeyup="updateBankBuy(1)" onkeydown="updateBankBuy(1)" autocomplete="off" inputmode="numeric">
+                                            </div>
+                                        </div>
                                         <br />
-                                        <label class="text-white">Send TRX</label>
-                                        <input type="number" class="form-control roundedCorners" id="bankBuyTrx" placeholder="100" value="100" maxlength="32" onkeyup="updateBankBuy(0)" onkeydown="updateBankBuy(0)" autocomplete="off" inputmode="numeric">
-                                        <p class="text-white">Minimum <span class="text-danger">100 TRX</span> Required!</p><br />
-
-                                        <label class="text-white">Receive USDJ</label>
-                                        <input type="number" class="form-control roundedCorners" id="bankBuyUSDJ" placeholder="10" value="10" maxlength="32" onkeyup="updateBankBuy(1)" onkeydown="updateBankBuy(1)" autocomplete="off" inputmode="numeric"><br />
+                                        
                                     </div>
 
                                     <div class="col text-left">
-                                        <h2 class="text-danger"><b>Sell USDJ</b></h2>
-                                        <span class="text-white"><i>(<span class="ourSellRate"></span> USDJ / 1 TRX)</i></span><br />
-                                        <br />
-                                        <label class="text-white">Send USDJ</label>
-                                        <input type="number" class="form-control roundedCorners" id="bankSellUSDJ" placeholder="2" value="2" maxlength="32" onkeyup="updateBankSell(0)" onkeydown="updateBankSell(0)" autocomplete="off" inputmode="numeric">
-                                        <p class="text-white">Minimum <span class="text-success">2 USDJ</span> Required!</p><br />
-
-                                        <label class="text-white">Receive TRX</label>
-                                        <input type="number" class="form-control roundedCorners" id="bankSellTrx" placeholder="1000" value="1000" maxlength="32" onkeyup="updateBankSell(1)" onkeydown="updateBankSell(1)" autocomplete="off" inputmode="numeric"><br />
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="text-danger"><b>Sell USDJ</b></h2>
+                                                <span class="text-white"><i>(<span class="ourSellRate"></span> USDJ / 1 TRX)</i></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Send USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellUSDJ" placeholder="2" value="2" maxlength="32" onkeyup="updateBankSell(0)" onkeydown="updateBankSell(0)" autocomplete="off" inputmode="numeric">
+                                                <p class="text-white">Minimum <span class="text-success">2 USDJ</span> Required!</p>
+                                            </div>
+                                            
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Receive TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellTrx" placeholder="1000" value="1000" maxlength="32" onkeyup="updateBankSell(1)" onkeydown="updateBankSell(1)" autocomplete="off" inputmode="numeric">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
