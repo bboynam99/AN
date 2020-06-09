@@ -18,6 +18,11 @@ html, body {
     background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(0,180,10,1) 8%, rgba(0,16,27,1) 100%);
 }
 
+.wallpaperOrange {
+    background: rgb(33,33,33);
+    background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(180,102,0,1) 8%, rgba(0,16,27,1) 100%);
+}
+
 .wallpaperYellow {
     background: rgb(33,33,33);
     background: linear-gradient(0deg, rgba(33,33,33,1) 0%, rgba(180,161,0,1) 8%, rgba(0,16,27,1) 100%);
@@ -40,12 +45,15 @@ html, body {
 
 /* Sidebar */
 #sidebar-wrapper {
+    z-index: 1;
     min-height: 100vh;
     margin-left: -15rem;
+    overflow-x: hidden;
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
+    position: fixed;
 }
 
 #sidebar-wrapper .list-group {width: 15rem;}
@@ -108,12 +116,12 @@ html, body {
 }
 
 .glassButton {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.25s;
 }
 
 .glassButton:hover {
-    background-color: rgba(95, 95, 95, 0.65);
+    background-color: rgb(67, 67, 67);
     color: #000;
 }
 
