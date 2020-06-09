@@ -291,6 +291,10 @@ html, body {
     border: solid #b4b4b4;
 }
 
+.orangeBorder {
+    border: solid #ce7700;
+}
+
 .blueBorder {
     border: solid #009dff;
 }
