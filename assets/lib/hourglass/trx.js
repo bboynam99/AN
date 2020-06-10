@@ -1,4 +1,5 @@
 var contractAddress="TXf4eo6v5hKRJxY7gLzeyrb9oCdsJoq1zi"; // Current
+var userdbAddress="TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4"; // User DB
 var p3TronContract;
 var userTokenBalance;
 var account;
@@ -9,8 +10,31 @@ async function loadTronWeb(){
         setTimeout(loadTronWeb,1000)
     } else {
         p3TronContract = await tronWeb.contract().at(contractAddress);
+        userdbContract = await tronWeb.contract().at(userdbAddress);
         setTimeout(function(){startLoop()},1000)
+        setInterval(function() {main();}, 2000);
     }
+}
+
+function main() {
+    getLoggedInUsername();
+}
+
+function getLoggedInUsername() {
+    currentAddr = tronWeb.defaultAddress['base58'];
+    userdbContract.getNameByAddress(currentAddr).call().then(result => {
+        console.log(result)
+        var loggedInUser = result.name.toString();
+        
+        if (loggedInUser == "") {
+            $('.arcTag').text("Welcome, Player!")
+        } else {
+            $('.arcTag').text("Welcome, " + result.name + "!")
+        }
+        document.getElementsByClassName("arcTag").className = "text-white";
+    }).catch((err) => {
+        console.log(err)
+    });
 }
 
 window.addEventListener("load",function() {

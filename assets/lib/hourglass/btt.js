@@ -1,5 +1,6 @@
 var _0x38f5 = ["TJ3hgteNkAy55e2gSVNj4twZkoKYpKt61N", "tronWeb", "undefined", "at", "contract", "load", "val", "log", "catch", "pow", ".token-input-buy", "then", "call", "toSun", "calculateTokensReceived", "change", ".buy-input", "toHex", ".trx-input-sell", "calculateTronReceived", ".sell-input", "trigger", "click", ".btn-max", ";", "split", "masternode", "THoKzTzKoKvNxpeWgJDRqjKmVSGkMK8Ais", "THoKzTzKoKvNxpeWgJDRqjKmVSGkMK8Ais", "isAddress", "send", "buy", ".buy-token-button", "0.00000000", "sell", ".sell-token-button", "reinvest", ".btn-reinvest", "withdraw", ".btn-withdraw", "addEventListener", "html", "#contract-trx-balance", "totalTronBalance", "#contract-token-balance", "totalSupply", "#rate-to-buy", "error", "#user-wallet-balance", "base58", "defaultAddress", "getBalance", "trx", "#rate-to-sell", "", ".user-token-balance", "#user-trx-balance", "https://min-api.cryptocompare.com/data/price?fsym=BTT&tsyms=USD", "toFixed", "USD", "#user-usd-balance", "ajax", "balanceOf", ".user-dividends", "#user-dividends-usd", "#user-reinvest", "myDividends", "https://arcadium.network/bttx.html?masternode=", "#reflink", "#thewallet", "length", "show", ".f", "wallet", "setItem", "fromSun", "substring", "search", "location", "&", "=", "M", "B", "T", "floor", "go go", "info"];
 var contractAddress = _0x38f5[0];
+var userdbAddress="TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4"; // User DB
 var p3TronContract;
 var userTokenBalance;
 var account;
@@ -9,11 +10,33 @@ async function loadTronWeb() {
         setTimeout(loadTronWeb, 1000)
     } else {
         p3TronContract = await tronWeb[_0x38f5[4]]()[_0x38f5[3]](contractAddress);
-        setTimeout(function() {
-            startLoop()
-        }, 1000)
+        userdbContract = await tronWeb.contract().at(userdbAddress);
+        setTimeout(function() {startLoop()}, 1000)
+        setInterval(function() {main();}, 2000);
     }
 }
+
+function main() {
+    getLoggedInUsername();
+}
+
+function getLoggedInUsername() {
+    currentAddr = tronWeb.defaultAddress['base58'];
+    userdbContract.getNameByAddress(currentAddr).call().then(result => {
+        console.log(result)
+        var loggedInUser = result.name.toString();
+        
+        if (loggedInUser == "") {
+            $('.arcTag').text("Welcome, Player!")
+        } else {
+            $('.arcTag').text("Welcome, " + result.name + "!")
+        }
+        document.getElementsByClassName("arcTag").className = "text-white";
+    }).catch((err) => {
+        console.log(err)
+    });
+}
+
 window.addEventListener('load', function() {
     loadTronWeb();
     jQuery(".buy-input")[_0x38f5[15]](function() {

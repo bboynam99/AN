@@ -1,5 +1,6 @@
 let tokenAddr = 'TMwFHYXLJaRUPeW6421aqXL4ZEzPRFGkGT'
 let bankAddr = 'TSEGf9jZCzLQMH2PTyF7f7NN3NfrbqHd5p'
+let userdbAddress = 'TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4' // User DB
 let userAddr = ''
 
 let stonk
@@ -38,11 +39,12 @@ async function interfaceLoop() {
         if (!customView && !defaultTronWeb) {
             if (userAddr == '') {
                 userAddr = tronWeb.defaultAddress.base58
+                userdbContract = await tronWeb.contract().at(userdbAddress)
             } else if (tronWeb.defaultAddress.base58 != userAddr) { // user changed address
                 document.location.reload()
             }
         }
-
+        
         // bank stuff
         lastCall = 'userTrx'
         userTrx = Number(await tronWeb.trx.getUnconfirmedBalance(userAddr)) / 1e6
@@ -90,11 +92,33 @@ async function interfaceLoop() {
         $('.USDJBalSell').text(formatDollas(userTokens))
 
         setTimeout(interfaceLoop, 5000)
+        setInterval(function() {usernameLoop();}, 2000);
     } catch(error) { 
         console.log(lastCall + ' failed:')
         console.log(error)
         setTimeout(interfaceLoop, 5000)
     }
+}
+
+function usernameLoop() {
+    getLoggedInUsername();
+}
+
+function getLoggedInUsername() {
+    currentAddr = tronWeb.defaultAddress['base58'];
+    userdbContract.getNameByAddress(currentAddr).call().then(result => {
+        console.log(result)
+        var loggedInUser = result.name.toString();
+        
+        if (loggedInUser == "") {
+            $('.arcTag').text("Welcome, Player!")
+        } else {
+            $('.arcTag').text("Welcome, " + result.name + "!")
+        }
+        document.getElementsByClassName("arcTag").className = "text-white";
+    }).catch((err) => {
+        console.log(err)
+    });
 }
 
 function addCommas(x) {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}

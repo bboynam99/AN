@@ -18,11 +18,34 @@ window.onload = function() {
 async function once() {
     tronWeb = window.tronWeb;
     pyropressContract = await tronWeb.contract().at("TMQd8PyWxDs1V2Xgt9PE2xbkmjNpybpSVi");
+    userdbContract = await tronWeb.contract().at("TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4");
 
     currentAddr = tronWeb.defaultAddress['base58'];
     console.log(currentAddr);
           
     setTimeout(function() {}, 2000);
+    setInterval(function() {usernameLoop();}, 2000);
+}
+
+function usernameLoop() {
+    getLoggedInUsername();
+}
+
+function getLoggedInUsername() {
+    currentAddr = tronWeb.defaultAddress['base58'];
+    userdbContract.getNameByAddress(currentAddr).call().then(result => {
+        console.log(result)
+        var loggedInUser = result.name.toString();
+        
+        if (loggedInUser == "") {
+            $('.arcTag').text("Welcome, Player!")
+        } else {
+            $('.arcTag').text("Welcome, " + result.name + "!")
+        }
+        document.getElementsByClassName("arcTag").className = "text-white";
+    }).catch((err) => {
+        console.log(err)
+    });
 }
 
 function compoundDividends() {
