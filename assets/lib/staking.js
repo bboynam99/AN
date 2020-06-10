@@ -303,10 +303,10 @@ async function run() {
           $('#totalFrozen').text(
             formatNumber(parseFloat(info.totalTokensFrozen / 1e6), 5)
           );
-          $('#myTokens').text(
+          $('.myTokens').text(
             formatNumber(parseFloat(info.userBalance / 1e6), 5)
           );
-          $('#myFrozen').text(
+          $('.myFrozen').text(
             formatNumber(parseFloat(info.userFrozen / 1e6), 5)
           );
           $('#myDividends').text(
