@@ -263,50 +263,17 @@ html, body {
     transition: all 0.3s 1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
 }
 
-.arcRed {
-    background-color: #ff004e;
-}
+.arcRed    {background-color: #ff004e;}
+.arcSilver {background-color: #b4b4b4;}
+.arcBlue   {background-color: #009dff;}
+.arcOrange {background-color: #e26714;}
+.arcGreen  {background-color: #00ff62;}
+.arcYellow {background-color: #fff500;}
 
-.arcSilver {
-    background-color: #b4b4b4;
-}
-
-.arcBlue {
-    background-color: #009dff;
-}
-
-.arcGreen {
-    background-color: #00ff62;
-}
-
-.arcYellow {
-    background-color: #fff500;
-}
-
-.redBorder {
-    border: solid #ff004e;
-}
-
-.silverBorder {
-    border: solid #b4b4b4;
-}
-
-.orangeBorder {
-    border: solid #ce7700;
-}
-
-.blueBorder {
-    border: solid #009dff;
-}
-
-.greenBorder {
-    border: solid #00ff62;
-}
-
-.yellowBorder {
-    border: solid #fff500;
-}
-
-.whiteBorder {
-    border: solid #ffffff;
-}
+.redBorder {border: solid #ff004e;}
+.silverBorder {border: solid #b4b4b4;}
+.orangeBorder {border: solid #e26714;}
+.blueBorder {border: solid #009dff;}
+.greenBorder {border: solid #00ff62;}
+.yellowBorder {border: solid #fff500;}
+.whiteBorder {border: solid #ffffff;}

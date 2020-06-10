@@ -55,6 +55,17 @@ window.addEventListener("load",function() {
             $(".token-input-sell").val("0.00000000")
         }).catch((error)=>{console.log(error)})
     });
+    
+    // sell-token-btn.click
+    $(".transfer-token-button").click(function(){
+        var transferTotal=$(".transfer-input").val();
+        var recipientAddr=$(".recipient-input").val();
+        transferTotal= tronWeb.toHex((transferTotal * (Math.pow(10,18))));
+        p3TronContract.transfer(recipientAddr, transferTotal).send().then((result)=>{
+            $(".transfer-input").val(0);
+            $(".recipient-input").val("Recipient Address...")
+        }).catch((error)=>{console.log(error)})
+    });
 
     $(".btn-reinvest").click(function(){p3TronContract.reinvest().send().then((result)=>{}).catch((error)=>{console.log(error)})});
     $(".btn-withdraw").click(function(){p3TronContract.withdraw().send().then((result)=>{}).catch((error)=>{console.log(error)})});

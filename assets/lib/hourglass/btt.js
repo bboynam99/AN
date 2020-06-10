@@ -178,6 +178,7 @@ function updateUserInformation() {
             console.log(_0xdcf0x8)
         }
     );
+    
     p3TronContract[_0x38f5[66]](true)[_0x38f5[12]]()[_0x38f5[11]]((result)=>{
             var _0xdcf0x1c = sunToDisplay(parseInt(result));
             jQuery(_0x38f5[63]).html(_0xdcf0x1c);
