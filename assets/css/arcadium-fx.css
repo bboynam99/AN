@@ -43,6 +43,11 @@ html, body {
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(6,185,235,1) 92%, rgba(0,212,255,1) 100%);
 }
 
+.wallpaperGoact {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,151,0,1) 100%);
+}
+
 /* Sidebar */
 #sidebar-wrapper {
     z-index: 1;
