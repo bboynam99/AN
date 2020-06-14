@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="ArcBank - Arcadium Network Cryptocurrency Trading Platform">
+        <meta name="author" content="Arcadium Network Core Developer Team">
+        
+        <title>ArcBank | Arcadium Network</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/offcanvas/">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.offcanvas.css" />
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+        
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand mr-auto mr-lg-0" href="#">ARCBANK</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://t.me/ArcadiumNetwork" target="_blank">Telegram</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank">Twitter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Arcadium-Network" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="nav-scroller bg-white shadow-sm">
+            <nav class="nav nav-underline bg-dark">
+                <a class="nav-link text-white" data-toggle="tab" href="#buyTab"><i class="fas fa-coins text-success"></i> Buy USDJ</a>
+                <a class="nav-link text-white" data-toggle="tab" href="#sellTab"><i class="fas fa-coins text-danger"></i> Sell USDJ</a>
+                <a class="nav-link text-white" data-toggle="tab" href="#accountTab"><i class="fas fa-question text-info"></i> Help</a>
+            </nav>
+        </div>
+
+        <main role="main" id="bank" class="container">
+            <br />
+            <div class="row">
+                <div class="col text-center text-white">
+                    <div class="card bg-dark">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h4 class="text-white">
+                                            <span id="trxBuy" class="trxBalBuy"></span><br />
+                                            <span class="USDJBalBuy"></span> USDJ
+                                        </h4>
+                                        <small class="text-white">Your Balances</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="col text-center text-white">
+                    <div class="card bg-dark">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h4 class="text-white">
+                                            <span id="availTrxBuy" class="availableTrxBuy"></span><br />
+                                            <span id="availUsdBuy" class="availableUsdBuy"></span> USDJ
+                                        </h4>
+                                        <small>Available Balances</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Tab panes -->
+            <div class="tab-content">               
+                <div class="tab-pane container active" id="buyTab">
+                    <div class="row">
+                        <div class="col text-center">
+                            <br />
+                            <div class="card bg-dark text-white">
+                                <div class="card-header bg-dark text-left text-white"><h4><img src="assets/img/usdj.png" width="30px" height="30px" /> Buy USDJ</h4></div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h5 class="text-white"><i>1 TRX = <span class="text-success"><span class="ourBuyRate"></span> USDJ</span></i></h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <label class="text-white">Send TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyTrx" placeholder="100" value="100" maxlength="32" onkeyup="updateBankBuy(0)" onkeydown="updateBankBuy(0)" autocomplete="off" inputmode="numeric">
+                                                <span>You have <span id="trxBuy" class="trxBalBuy"></span></span>
+                                            </div>
+
+                                            <div class="col text-center">
+                                                <label class="text-white">Receive USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyUSDJ" placeholder="10" value="10" maxlength="32" onkeyup="updateBankBuy(1)" onkeydown="updateBankBuy(1)" autocomplete="off" inputmode="numeric">
+                                                <span>ArcBank has <span id="availUsdBuy" class="availableUsdBuy"></span> USDJ</span>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white">Minimum <span class="text-danger">100 TRX</span> Required!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark text-white">
+                                    <div class="container">
+                                        <div id="approval" class="row" style="display: none;">
+                                            <div id="text" class="col text-center">
+                                                <a class="btn btn-block btn-warning btn-sm roundedCorners" onclick="approveBank()" role="button">APPROVAL REQUIRED</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a id="buyTokensBtn" class="btn btn-sm btn-buy" onclick="bankBuy()" role="button">INSUFFICIENT FUNDS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Sell USDJ -->
+                <div class="tab-pane container fade" id="sellTab">
+                    <br />
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="card bg-dark text-white">
+                                <div class="card-header bg-dark text-left text-white"><h4><img src="assets/img/usdj.png" width="30px" height="30px" /> Sell USDJ</h4></div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="container">
+                                        <div class="row">
+                                    <div class="col text-center">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h5 class="text-white"><i>1 TRX = <span class="text-danger"><span class="ourSellRate"></span> USDJ</span></i></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <label class="text-white">Send USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellUSDJ" placeholder="2" value="2" maxlength="32" onkeyup="updateBankSell(0)" onkeydown="updateBankSell(0)" autocomplete="off" inputmode="numeric">
+                                                <span>You have <span class="USDJBalBuy text-white"></span> USDJ</span>
+                                            </div>
+
+                                            <div class="col text-center">
+                                                <label class="text-white">Receive TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellTrx" placeholder="1000" value="1000" maxlength="32" onkeyup="updateBankSell(1)" onkeydown="updateBankSell(1)" autocomplete="off" inputmode="numeric">
+                                                <span>ArcBank has <span id="availTrxBuy" class="availableTrxBuy text-white"></span></span>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white">Minimum <span class="text-success">2 USDJ</span> Required!</p>
+                                            </div>
+                                        </div>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark text-white">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a id="sellTokensBtn" class="btn btn-sm btn-sell" onclick="bankSell()" role="button">SELL</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane container fade" id="accountTab">
+                    <br />
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="card">
+                                <div class="card-header bg-dark text-left text-white"><h4><i class="fas fa-user"></i> What is This?</h4></div>
+                                <div class="card-body bg-dark text-white">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white">
+                                                    ArcBank is a Smart Contract and Dapp deployed on the TRON Network, enabling you to buy and sell USDJ (USD Stablecoin) for TRX (TRON) at a minimal-fee rate. The contract is owned and manged by Arcadium Network Developer Team.<br />
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <p class="text-white">
+                                                    Arcadium Network Developer Team is the sole liquidity provider for the pool which enables trade - Every trade that is conducted (USDJ to TRX, and TRX to USDJ) incurs a 5&#37; fee, to assist with exchange stability and administration.<br />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <p class="text-white">
+                                                    ArcBank is built on the foundation of works by another developer, &quot;<b>Mr. F</b>&quot;, who has recently created and published <a href="https://stonk.fund" target="_blank">Stonk Fund</a>. Please check it out, and join the <a href="https://discord.gg/9KnCRmA" target="_blank">&#64;Stonk Simulator Discord Server</a> for more!<br />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <p class="text-white">
+                                                    The Smart Contract for &quot;ArcBank&quot; is a derivative work of <a href="https://tronscan.org/#/contract/TZGJkVvLBjbKhWQmv5eVd3HSa7mvJhjYET/code" target="_blank">This Contract by Mr. F</a> - it is used <i>with permission</i>, and in this deployment has been modified to better suit Arcadium Network's purposes.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-dark text-white">
+                                    <div class="container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            
+            <div class="row">
+                <div class="col text-center">
+                    <small class="text-primary"><i>A 5% processing fee is applied to all exchanges of USDJ/TRX. Fees are subject to change at Arcadium Network&apos;s sole discretion.</i></small>
+                </div>
+            </div>
+            <br />
+        </main>
+        
+        <!-- Bottom Nav -->
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
+            <ul class="navbar-nav mr-auto ml-auto">
+                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                <coingecko-coin-price-marquee-widget  coin-ids="tron,bittorrent-2,just-stablecoin" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
+            </ul>
+        </nav>
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap.offcanvas.js"></script>
+        
+        <script src="assets/lib/bankmain.js"></script>
+        <script src="assets/lib/username.js"></script>
+    </body>
+</html>
