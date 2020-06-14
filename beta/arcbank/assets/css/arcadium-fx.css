@@ -7,8 +7,6 @@ html, body {
     background-color: #000;
 }
 
-
-
 /* Sidebar */
 #sidebar-wrapper {
     z-index: 1;
@@ -234,10 +232,47 @@ html, body {
 .arcGreen  {background-color: #00ff62;}
 .arcYellow {background-color: #fff500;}
 
-.redBorder {border: solid #ff004e;}
-.silverBorder {border: solid #b4b4b4;}
-.orangeBorder {border: solid #e26714;}
-.blueBorder {border: solid #009dff;}
-.greenBorder {border: solid #00ff62;}
-.yellowBorder {border: solid #fff500;}
-.whiteBorder {border: solid #ffffff;}
+.redBorder {
+    border: solid #ff004e;
+    transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+.silverBorder {
+    border: solid #b4b4b4;
+	animation: pulse 2s infinite;
+}
+
+.orangeBorder {
+    border: solid #e26714;
+}
+
+.blueBorder {
+    border: solid #009dff;
+}
+
+.greenBorder {
+    border: solid #00ff62;
+}
+
+.yellowBorder {
+    border: solid #fff500;
+}
+
+.whiteBorder {
+    border: solid #ffffff;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}

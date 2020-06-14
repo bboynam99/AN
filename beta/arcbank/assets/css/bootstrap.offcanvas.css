@@ -4,7 +4,9 @@ body {
 }
 
 body {
-  padding-top: 70px;
+    padding-top: 88px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(16,140,76,1) 40%, rgba(55,55,55,1) 100%);
 }
 
 @media (max-width: 991.98px) {

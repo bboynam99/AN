@@ -69,9 +69,9 @@ async function interfaceLoop() {
         $('.marketRate').text((bankData.market/1e18).toFixed(6))
         $('.ourBuyRate').text((bankData.buy/1e18).toFixed(6))
         $('.ourSellRate').text((bankData.sell/1e18).toFixed(6))
-        $('.availableTrxBuy').text((bankData.tronBal/1e6).toFixed(2) + ' TRX')
+        $('.availableTrxBuy').text((bankData.tronBal/1e6).toFixed(2))
         $('.availableUsdBuy').text(formatDollas(bankData.tokenBal))
-        $('.availableTrxSell').text((bankData.tronBal/1e6).toFixed(2) + ' TRX')
+        $('.availableTrxSell').text((bankData.tronBal/1e6).toFixed(2))
         $('.availableUsdSell').text(formatDollas(bankData.tokenBal))
 
         if (lastModifiedBuy == 'trx') {
@@ -86,39 +86,17 @@ async function interfaceLoop() {
             updateBankSell(1)
         }
 
-        $('.trxBalBuy').text((userTrx).toFixed(2) + ' TRX')
+        $('.trxBalBuy').text((userTrx).toFixed(2))
         $('.USDJBalBuy').text(formatDollas(userTokens))
-        $('.trxBalSell').text((userTrx).toFixed(2) + ' TRX')
+        $('.trxBalSell').text((userTrx).toFixed(2))
         $('.USDJBalSell').text(formatDollas(userTokens))
 
         setTimeout(interfaceLoop, 5000)
-        setInterval(function() {usernameLoop();}, 2000);
     } catch(error) { 
         console.log(lastCall + ' failed:')
         console.log(error)
         setTimeout(interfaceLoop, 5000)
     }
-}
-
-function usernameLoop() {
-    getLoggedInUsername();
-}
-
-function getLoggedInUsername() {
-    currentAddr = tronWeb.defaultAddress['base58'];
-    userdbContract.getNameByAddress(currentAddr).call().then(result => {
-        console.log(result)
-        var loggedInUser = result.name.toString();
-        
-        if (loggedInUser == "") {
-            $('.arcTag').text("Welcome, Player!")
-        } else {
-            $('.arcTag').text("Welcome, " + result.name + "!")
-        }
-        document.getElementsByClassName("arcTag").className = "text-white";
-    }).catch((err) => {
-        console.log(err)
-    });
 }
 
 function addCommas(x) {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
@@ -154,16 +132,16 @@ function checkValidBuy(amount) {
   }
   if (amount > userTrx) {
     $('#buyTokensBtn').text('INSUFFICIENT FUNDS')
-      document.getElementById("buyTokensBtn").className = "btn btn-block btn-lg btn-dark roundedCorners text-warning"; 
+      document.getElementById("buyTokensBtn").className = "btn btn-block btn-sm btn-dark roundedCorners text-warning"; 
     $('#trxBuy').css('color', '#ff3912')
     validBuy = false
   } else {
-    $('#trxBuy').css('color', '#799fff')
+    $('#trxBuy').css('color', '#14ff00')
   }
   let received = getTrxBuy(amount)
   if ((received * 1e18) > Number(bankData.tokenBal)) {
       $('#buyTokensBtn').text('BANK BALANCE TOO LOW')
-      document.getElementById("buyTokensBtn").className = "btn btn-block btn-lg btn-dark roundedCorners text-danger"; 
+      document.getElementById("buyTokensBtn").className = "btn btn-block btn-sm btn-dark roundedCorners text-danger"; 
       $('#availUsdBuy').css('color', '#ff3912')
       validBuy = false
   } else {
@@ -173,7 +151,7 @@ function checkValidBuy(amount) {
     $('#buyTokensBtn').css("opacity", ".5")
   } else {
       $('#buyTokensBtn').text('BUY USDJ')
-      document.getElementById("buyTokensBtn").className = "btn btn-block btn-lg btn-success roundedCorners text-white"; 
+      document.getElementById("buyTokensBtn").className = "btn btn-block btn-sm btn-success roundedCorners text-dark"; 
       $('#buyTokensBtn').css("opacity", "1")
   }
 }
@@ -190,7 +168,7 @@ function checkValidSell(amount) {
   }
   if (amount > userTokens) {
       $('#sellTokensBtn').text('INSUFFICIENT FUNDS')
-      document.getElementById("sellTokensBtn").className = "btn btn-block btn-lg btn-danger roundedCorners text-white"; 
+      document.getElementById("sellTokensBtn").className = "btn btn-block btn-sm btn-danger roundedCorners text-white"; 
       $('.USDJBalSell').css('color', '#ff3912')
       validSell = false
   } else {
@@ -199,7 +177,7 @@ function checkValidSell(amount) {
   let received = getTrxSell(amount)
   if ((received * 1e6) > Number(bankData.tronBal)) {
     $('#sellTokensBtn').text('BANK BALANCE TOO LOW')
-    document.getElementById("sellTokensBtn").className = "btn btn-block btn-lg btn-danger roundedCorners text-white"; 
+    document.getElementById("sellTokensBtn").className = "btn btn-block btn-sm btn-danger roundedCorners text-white"; 
     $('.availableTrxSell').css('color', '#ff3912')
     validSell = false
   } else {
@@ -209,7 +187,7 @@ function checkValidSell(amount) {
     $('#sellTokensBtn').css("opacity", ".5")
   } else {
       $('#sellTokensBtn').text('SELL USDJ')
-      document.getElementById("sellTokensBtn").className = "btn btn-block btn-lg btn-danger roundedCorners text-white"; 
+      document.getElementById("sellTokensBtn").className = "btn btn-block btn-sm btn-danger roundedCorners text-white"; 
       $('#sellTokensBtn').css("opacity", "1")
   }
 }
