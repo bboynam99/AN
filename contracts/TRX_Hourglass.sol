@@ -1,4 +1,4 @@
-pragma solidity 0.5.9;
+pragma solidity 0.5.8;
 
 contract P3T {
     modifier onlyBagholders() {
@@ -17,8 +17,8 @@ contract P3T {
     event onWithdraw(address indexed customerAddress, uint256 tronWithdrawn);
     event Transfer(address indexed from, address indexed to, uint256 tokens);
 
-    string public name = "Arcadium C3T";
-    string public symbol = "C3T";
+    string public name = "D1VS Game";
+    string public symbol = "D1VS";
     uint8 constant public decimals = 18;
     uint8 constant internal dividendFee_ = 10;
     uint256 constant internal tokenPriceInitial_ = 10000;
