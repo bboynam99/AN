@@ -5,251 +5,448 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="D1VS - Arcadium Network">
         <meta name="author" content="Arcadium Network">
-        <title>D1VS | Arcadium Network</title>
+        <title>TRON Dashboard | Arcadium Network</title>
 
         <!-- Core CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/arcadium-fx.css">
-        <link rel="stylesheet" href="assets/css/arcadium-colours.css">
+        <link rel="stylesheet" href="assets/css/weapon.css">
 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
+    
+    <body class="wallpaper text-white">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark darkNavbar fixed-top">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <body class="is-preload wallpaper">
-        <div class="d-flex" id="wrapper">
-
-            <!-- Sidebar -->
-            <div class="glassPanel border-light" id="sidebar-wrapper">
-                <br />
-                <br />
-                <br />
-                <br />
-                <div class="sidebar-heading text-white">
-                    <small class="text-muted">Wallet Balance</small>
-                    <h5 class="text-white"><span id="user-wallet-balance"></span> TRX</h5>
-                    <button type="button" class="btn btn-block btn-sm btn-primary roundedCorners" onClick="window.location.reload();">Refresh</button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bookmark text-primary"></i> Review
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank">DappStats</a>
+                                <a class="dropdown-item" href="https://dapp.review/dapp/13081" target="_blank">DappReview</a>
+                                <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank">StateOfTheDapps</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/Arcadium-Network" target="_blank"><i class="fab fa-github text-primary"></i> GitHub</a></li>
+                    </ul>
                 </div>
-                <b class="text-white"> // DAPPS</b>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="divs.html"><b><i class="fas fa-chart-line text-danger"></i> D1VS</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="bttx.html"><b><i class="fas fa-dice-d6" style="color: #ffff00;"></i> BTTX</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="daily.html"><b><i class="fas fa-tint text-primary"></i> DAILY</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="arcbank.html"><b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="pyropress.html"><b><i class="fas fa-fire" style="color: #ff8900;"></i> PYROPRESS</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="goactdivs.html"><b><i class="fas fa-users" style="color: #ff0000;"></i> GOACT D1VS</b></a>
-                </div>
-                <br />
-                <b class="text-white"> // REVIEW</b>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank"><b><i class="fas fa-bookmark text-white"></i> DappStats</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://dapp.review/dapp/13081" target="_blank"><b><i class="fas fa-bookmark text-white"></i> DappReview</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank"><b><i class="fas fa-bookmark text-white"></i> StateOfTheDapps</b></a>
-                </div>
-                <br />
-                <b class="text-white"> // RESOURCES</b>
-                <div class="list-group list-group-flush">
-                    <a href="https://github.com/ArcadiumNetwork" target="_blank" class="list-group-item list-group-item-action glassButton text-white"><i class="fab fa-github text-info"></i>  GitHub</a>
-                </div>
-                <br />
-            </div>
-            <!-- /#sidebar-wrapper -->
-
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <!-- NAVBAR -->
-                <nav class="navbar navbar-expand-lg navbar-dark border-light fixed-top" style="background-color: #000;">
-                    <div class="navbar-brand text-white"><a href="index.html"><img src="assets/img/logo.png" width="40px" /></a></div>
-                    <div class="nav-item mr-auto">
-                        <span class="text-white"><b>Vault: <span class="text-danger"><span id="contract-trx-balance">0</span> TRX&nbsp;</span></b>
-                        </span>
-                        
-                        <span class="text-white"><b>Tokens: <span class="text-success"><span id="contract-token-balance">0</span> D1VS</span></b>
-                        </span>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
-                        </ul>
-                    </div>
-                    
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-                
-                <!-- MAIN CONTAINER -->
-                <div id="content" class="container">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-            <div class="row">
+            </nav>
+            
+            <div id="top" class="jumbotron glassPanel text-white" style="padding-top: 120px;">
                 <div class="container">
-                    <div class="row jumbotron glassPanel roundedCorners" style="border: solid #868e96;">
-                        <div class="col text-center">
-                            <h1 class="text-white"><i class="fas fa-chart-line text-danger" aria-hidden="true"></i> <span class="arcTag">Arcadium D1VS</span></h1>
-                            <p class="text-muted"><i>Do you have the strongest hands?</i></p>
-                        </div>
-                    </div>
-                    
                     <div class="row">
                         <div class="col text-center">
-                            <a class="btn btn-block btn-md btn-dark btn-outline-primary text-white roundedCorners" href="arcbank.html" target="_blank">Buy TRX with USDJ on ArcBank</a>
+                            <h1><span class="arcTag arcadiumFont">Player</span></h1>
+                            <p>Let&apos;s get those Dividends!</p>
+                            <a class="btn btn-sm btn-primary roundedCorners" href="#buttonsRow">Balances</a>
+                            <a class="btn btn-sm btn-secondary roundedCorners" href="#balancesRow">D1VS</a>
+                            <a class="btn btn-sm btn-success roundedCorners" href="#trxRow">BTTX</a>
+                            <a class="btn btn-sm btn-info roundedCorners" href="#bttRow">Daily</a>
+                            <a class="btn btn-sm btn-warning roundedCorners" href="#dailyRow">Stats</a>
+                            <a class="btn btn-sm btn-danger roundedCorners" href="#statsRow">Referrals</a>
                         </div>
                     </div>
-                    <br />
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card-body glassPanel roundedCorners" style="border: solid #077cf1;">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h2 class="display-5 text-white">
-                                            <img src="assets/img/logo.png" width="30px" /> <span class="user-token-balance">0.00</span> D1VS
-                                        </h2>
-                                        <small class="text-muted"><i>YOUR BALANCE</i></small>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="container">
+                <div id="buttonsRow" class="row">
+                    <div class="col text-center">
+                        <a class="btn btn-block btn-md btn-info roundedCorners" data-toggle="modal" data-target="#guideModal">How to Play</a>
+                    </div>
+                        
+                    <div class="col text-center">
+                        <a class="btn btn-block btn-md btn-warning roundedCorners" data-toggle="modal" data-target="#contractsModal">View Contracts</a>
+                    </div>
+                </div>
+                <br />
+                
+                <div id="balancesRow" class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h3><img src="assets/img/tron.png" width="25px" height="25px"> <span id="trxBuy" class="trxBalBuy">0.00000</span></h3>
+                                            <small>Your TRX Balance</small>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/tron.png" width="30px" /> <span id="user-trx-balance"></span> TRX
-                                        </h6>
-                                        <small class="text-muted"><i>TRX VALUE</i></small>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <a class="btn btn-block btn-sm btn-primary roundedCorners" href="#" data-toggle="modal" data-target="#sellUSDJModal">Buy with USDJ</a>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                        
+                    <div class="col-md-4 text-center">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h3><img src="assets/img/btt.png" width="25px" height="25px"> <span class="user-wallet-btt-balance">0.00000</span></h3>
+                                            <small>Your BTT Balance</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <a class="btn btn-block btn-sm btn-primary roundedCorners" href="https://poloniex.org/exchange?id=39" target="_blank">Trade on Poloniex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h3><img src="assets/img/usdj.png" width="25px" height="25px"> <span class="USDJBalBuy">$0.00</span></h3>
+                                            <small>Your USDJ Balance</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <a class="btn btn-block btn-sm btn-primary roundedCorners" href="#" data-toggle="modal" data-target="#buyUSDJModal">Buy with TRX</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+                
+                <!-- Wallet Row -->
+                <div id="trxRow" class="row">
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header"><h4>My D1VS</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h2 class="display-5 text-white">
+                                                <img src="assets/img/logo.png" width="30px" /> <span class="user-token-balance">0.00</span> D1VS
+                                            </h2>
+                                            <p>
+                                                <span class="badge badge-pill badge-danger"><span id="user-trx-balance"></span> TRX</span> / <span class="badge badge-pill badge-light"><span id="user-usd-balance"></span> USD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button type="button" class="btn btn-block btn-md btn-success btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#buyModal">
+                                                <i class="fas fa-coins"></i> Buy
+                                            </button>
+                                        </div>
                                             
-                                    <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/dollar.png" width="30px" /> <span id="user-usd-balance"></span> USD
-                                        </h6>
-                                        <small class="text-muted"><i>DOLLAR VALUE</i></small>
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-danger btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#sellModal">
+                                                <i class="fas fa-dollar-sign"></i> Sell
+                                            </button>
+                                        </div>
+                                            
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-warning btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#transferModal">
+                                                <i class="fas fa-dollar-sign"></i> Transfer
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <br />
-                                
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                        
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header"><h4>My TRX Earnings</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h2 class="display-5 text-white">
+                                                <img src="assets/img/tron.png" width="30px" /> <span class="user-dividends">0.00</span> TRX
+                                            </h2>
+                                            <p>
+                                                <span class="badge badge-pill badge-success"><span id="user-reinvest"></span> D1VS</span> / <span class="badge badge-pill badge-light"><span id="user-dividends-usd"></span> USD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button type="button" class="btn btn-block btn-md btn-dark btn-outline-info roundedCorners text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound TRX</button>
+                                        </div>
+
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-dark btn-outline-warning roundedCorners text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw TRX</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                    
+                <!-- Earnings Row -->
+                <div id="bttRow" class="row">
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header"><h4>My BTTX</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h2 class="display-5 text-white">
+                                                <img src="assets/img/bttx.png" width="30px" /> <span class="user-bttx-balance">0.00</span> BTTX
+                                            </h2>
+                                            <p>
+                                                <span class="badge badge-pill badge-info"><span id="user-btt-balance"></span> BTT</span> / <span class="badge badge-pill badge-light"><span id="user-bttx-usd-balance"></span> USD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button type="button" class="btn btn-block btn-md btn-success btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#buyBTTModal">
+                                                <i class="fas fa-coins"></i> Buy
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-danger btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#sellBTTModal">
+                                                <i class="fas fa-dollar-sign"></i> Sell
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                        
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header"><h4>My BTT Earnings</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h2 class="display-5 text-white">
+                                                <img src="assets/img/btt.png" width="30px" /> <span class="user-btt-dividends">0.00</span> BTT
+                                            </h2>
+                                            <p class="text-muted">
+                                                <span class="badge badge-pill badge-warning"><span id="user-reinvest-bttx"></span> BTTX</span> / <span class="badge badge-pill badge-light"><span id="user-btt-dividends-usd"></span> USD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button type="button" class="btn btn-block btn-md btn-dark btn-outline-info roundedCorners text-white btn-reinvest-bttx"><i class="fas fa-recycle"></i> Compound BTT</button>
+                                        </div>
+                                                
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-dark btn-outline-warning roundedCorners text-white btn-withdraw-bttx"><i class="fas fa-hand-holding-usd"></i> Withdraw BTT</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                    
+                <!-- Daily Row -->
+                <div id="dailyRow" class="row">
+                    <div class="col text-center">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header text-left text-white"><h4>Arcadium Daily</h4></div>
+                            <div class="card-body">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-md btn-success btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#buyModal">
-                                            <i class="fas fa-coins"></i> Buy D1VS
-                                        </button>
-                                    </div>
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <b>What is Daily?</b><br />
+                                                <p>
+                                                    Daily is a TRX Pool which drips 3&#37; of your Total Deposits to the Pool every 24 hours back to you, until the pool is empty!<br />
+                                                    Watch out though - other players are also contributing and withdrawing too! Other Arcadium Dapps and Games will contribute to the Daily TRX Pool in the future!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="display-5 text-white">
+                                                    <img src="assets/img/tron.png" width="30px" /> <span id="your-daily-dividends">0.00</span> TRX
+                                                </h2>
+                                                <small>
+                                                    <span id="your-daily-invest"></span> TRX Invested / <span id="your-earn-rate"></span> TRX Daily
+                                                </small>
+                                            </div>
                                                 
+                                                <div class="col text-center">
+                                                    <label class="text-white">TRX to Invest: </label>
+                                                    <input type="text" class="form-control invest-input roundedCorners" value="0"><br />
+                                                    <small class="text-white">
+                                                        <i>5% dev fee, 10% D1VS donation, additional 5% affiliate fee if referred</i>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-dark btn-outline-info roundedCorners daily-withdraw-button text-white"><i class="fas fa-tint" aria-hidden="true"></i> Collect</button>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-success roundedCorners invest-button"><i class="fas fa-funnel-dollar" aria-hidden="true"></i> Invest</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                <br />
+                
+                <!-- Stats Row -->
+                <div id="statsRow" class="row">
+                    <div class="col text-center">
+                        <div class="card glassPanel roundedCorners blueBorder">
+                            <div class="card-header text-left text-white"><h4>Arcadium Stats</h4></div>
+                            <div class="card-body">
+                                <div class="row text-white">
                                     <div class="col text-center">
-                                        <button class="btn btn-block btn-md btn-danger btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#sellModal">
-                                            <i class="fas fa-dollar-sign"></i> Sell D1VS
-                                        </button>
+                                        <b><span id="contract-trx-balance">0</span> TRX</b><br />
+                                        <b><span id="contract-token-balance">0</span> D1VS</b><br />
+                                        <small>In D1VS</small>
                                     </div>
                                     
                                     <div class="col text-center">
-                                        <button class="btn btn-block btn-md btn-primary btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#transferModal">
-                                            <i class="fas fa-dollar-sign"></i> Transfer D1VS
-                                        </button>
+                                        <span id="availUsdBuy" class="availableUsdBuy"></span> USDJ<br />
+                                        <span id="availTrxBuy" class="availableTrxBuy"></span><br />
+                                        <small>Available for Trade</small>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <b><span id="contract-btt-balance">0</span> BTT</b><br />
+                                        <b><span id="contract-bttx-balance">0</span> BTTX</b><br />
+                                        <small>In BTTX</small>
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="card-body glassPanel roundedCorners" style="border: solid #077cf1;">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h2 class="display-5 text-white">
-                                            <img src="assets/img/tron.png" width="30px" /> <span class="user-dividends">0.00</span> TRX
-                                        </h2>
-                                        <small class="text-muted"><i>YOUR EARNINGS</i></small>
-                                    </div>
-                                </div>
                                 
+                            <div class="card-footer">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/logo.png" width="30px" /> <span id="user-reinvest"></span> D1VS
-                                        </h6>
-                                        <small class="text-muted"><i>D1VS VALUE</i></small>
-                                    </div>
                                             
-                                    <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/dollar.png" width="30px" /> <span id="user-dividends-usd"></span> USD
-                                        </h6>
-                                        <small class="text-muted"><i>DOLLAR VALUE</i></small>
-                                    </div>
-                                </div>
-                                <br />
-                                
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-md btn-dark btn-outline-info roundedCorners text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound</button>
-                                    </div>
-                                                
-                                    <div class="col text-center">
-                                        <button class="btn btn-block btn-md btn-dark btn-outline-warning roundedCorners text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
                                     </div>
                                 </div>
                             </div>
-                            <br />
                         </div>
+                        <br />
                     </div>
-                    
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <input id="reflink" class="form-control roundedCorners bg-dark text-info" value="" readonly=""><br />
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <button class="btn btn-block btn-md btn-info roundedCorners text-white copyButton" data-clipboard-target="#reflink"><i class="fas fa-users"></i> Copy Link</button>
-                            <br />
-                        </div>
-                        <div class="col text-center">
-                                <p class="mb-0 text-white"><button class="btn btn-block btn-md btn-primary roundedCorners text-white" data-toggle="modal" data-target="#guideModal" aria-hidden="true"><i class="fas fa-gamepad"></i> How to Play</button></p>
-
-                            <br />
-                        </div>
-                        <div class="col text-center">
-                                <p class="mb-0 text-white"><button class="btn btn-block btn-md btn-dark roundedCorners text-white" data-toggle="modal" data-target="#faqModal" aria-hidden="true"><i class="fas fa-info"></i> How it Works</button></p>
-
-                            <br />
-                        </div>
-                    </div>
-                    
                 </div>
+                <br />
+                
+                <!-- Referral Row -->
+                <div id="referralRow" class="row">
+                    <div class="col-md-8 text-center">
+                        <input id="reflink" class="form-control roundedCorners bg-dark text-white text-center" value="" readonly=""><br />
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <button class="btn btn-block btn-md btn-info roundedCorners text-white copyButton" data-clipboard-target="#reflink"><i class="fas fa-users"></i> Copy Link</button>
+                        <br />
+                    </div>
+                </div>
+                <br />
             </div>
             
-            <div class="row">
-                <div class="col text-center">
-                    <small class="text-white">
-                        <i>Arcadium D1VS is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
-                    </small>
-                </div>
-            </div>
-            <br />
-                </div>
-                
-                <button class="floatingButton" id="menu-toggle" style="z-index: 1"><img src="assets/img/logo.png" width="50px" /></button>
-            </div>
-            <!-- /#page-content-wrapper -->
-        </div>
+            <a href="#top" class="floatingButton" style="z-index: 1"><h1><i class="fas fa-chevron-circle-up"></i></h1></a>
+        </main>
         
-        <footer class="py-5 px-5 glassPanel text-white">
-            <div class="row">
-                <div class="col text-center">
-                    <b>The Fine Print</b>
-                    <small class="d-block mb-3 text-muted">
-                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
-                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
-                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
-                    </small>
+        <footer>
+            <div class="container">
+                <div class="jumbotron glassPanel roundedCorners">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <b>The Fine Print</b>
+                                <small class="d-block mb-3 text-white">
+                                    This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                                    Only invest with cryptocurrencies which you can afford to lose. Using Arcadium Network, its website or services constitutes agreement with this statement.<br />
+                                    Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.<br />
+                                    <br />
+                                    <b>Please remember, this is a GAME, not an investment platform! You are responsible for your own investments and losses!</b>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br />
-            <br />
         </footer>
+        <br />
+        <br />
+        <br />
         
         <!-- Bottom Nav -->
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
@@ -259,6 +456,7 @@
             </ul>
         </nav>
         
+        <!-- Dapp JS -->
         <!-- Modals -->
         <div class="modal" id="faqModal">
             <div class="modal-dialog">
@@ -403,11 +601,25 @@
                                         <span id="rate-to-buy">0</span> TRX
                                     </h2>
                                 </div>
+                                
+                                <div class="col text-center">
+                                    <small class="text-white">Your Wallet</small>
+                                    <h2 class="text-danger">
+                                        <img src="assets/img/tron.png" width="40px" />
+                                        <span id="user-wallet-balance"></span> TRX
+                                    </h2>
+                                </div>
                             </div>
+                            <br />
                                 
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control roundedCorners buy-input" placeholder="TRX to Spend" /><br />
+                                    <label class="text-white"><b>TRX to Deposit: </b></label>
+                                    <input type="text" class="form-control roundedCorners buy-input" placeholder="TRX to Deposit" />
+                                </div>
+                                
+                                <div class="col">
+                                    <label class="text-white"><b>You will Receive: </b></label>
                                     <input type="text" class="form-control bg-dark text-success roundedCorners token-input-buy" readonly="" value="0.00000000">
                                 </div>
                             </div>
@@ -455,7 +667,12 @@
                                 
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control roundedCorners sell-input" placeholder="D1VS to Sell" /><br />
+                                    <label class="text-white"><b>D1VS to Sell: </b></label>
+                                    <input type="text" class="form-control roundedCorners sell-input" placeholder="D1VS to Sell" />
+                                </div>
+                                
+                                <div class="col">
+                                    <label class="text-white"><b>You will Receive: </b></label>
                                     <input type="text" class="form-control bg-dark text-danger roundedCorners token-input-sell" readonly="" value="0.00000000">
                                 </div>
                             </div>
@@ -477,8 +694,120 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Transfer Modal -->
+        <!-- Buy BTT Modal -->
+        <div class="modal" id="buyBTTModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Buy BTTX</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <small class="text-white">Current Price</small>
+                                    <h2 class="text-success">
+                                        <img src="assets/img/btt.png" width="40px" />
+                                         <span id="rate-to-buy-bttx">0.00</span> BTT
+                                    </h2>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <small class="text-white">Your Wallet</small>
+                                    <h2 class="text-white">
+                                        <img src="assets/img/btt.png" width="40px" />
+                                        <span class="user-wallet-btt-balance"></span> BTT
+                                    </h2>
+                                </div>
+                            </div>
+                            <br />
+                                
+                            <div class="row">
+                                <div class="col">
+                                    <label class="text-white"><b>BTT to Deposit: </b></label>
+                                    <input type="text" class="form-control text-white roundedCorners buy-bttx-input" placeholder="BTT to Deposit" />
+                                </div>
+                                <div class="col">
+                                    <label class="text-white"><b>You will Receive: </b></label>
+                                    <input type="text" class="form-control bg-dark text-success roundedCorners btt-input-buy" readonly="" value="0.00000000">
+                                </div>
+                            </div>
+                            <br />
+                                
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-success btn-block roundedCorners btn-buy buy-bttx-button">Buy BTTX</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Sell BTT Modal -->
+        <div class="modal" id="sellBTTModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Sell BTTX</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <small class="text-white">Current Value</small>
+                                    <h2 class="text-danger">
+                                        <img src="assets/img/btt.png" width="40px" />
+                                        <span id="rate-to-sell-bttx">0</span> BTT
+                                    </h2>
+                                </div>
+                            </div>
+                                
+                            <div class="row">
+                                <div class="col">
+                                    <label class="text-white"><b>BTTX to Sell: </b></label>
+                                    <input type="text" class="form-control text-white roundedCorners sell-bttx-input" placeholder="BTTX to Sell" />
+                                </div>
+                                <div class="col">
+                                    <label class="text-white"><b>You will Receive: </b></label>
+                                    <input type="text" class="form-control bg-dark text-danger roundedCorners bttx-input-sell" readonly="" value="0.00000000">
+                                </div>
+                            </div>
+                            <br />
+                                
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-danger btn-block roundedCorners btn-sell sell-bttx-button">Sell BTTX</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Transfer D1VS Modal -->
         <div class="modal" id="transferModal">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark roundedCorners">
@@ -493,9 +822,23 @@
                     <div class="modal-body">
                         <div class="container">
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control roundedCorners transfer-input" placeholder="D1VS to Transfer..." /><br />
-                                    <input type="text" class="form-control roundedCorners recipient-input" placeholder="Address to Send D1VS to..." />
+                                <div class="col text-center">
+                                    <p class="text-white">
+                                        Every transfer of D1VS incurs a 10&#37; Fee, which is distributed as Dividends to those who hold D1VS!
+                                    </p>
+                                </div>
+                            </div>
+                            <br />
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="text-white"><b>D1VS to Send: </b></label>
+                                    <input type="text" class="form-control roundedCorners text-white transfer-input" placeholder="D1VS to Transfer..." />
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <label class="text-white"><b>Recipient: </b></label>
+                                    <input type="text" class="form-control roundedCorners text-white recipient-input" placeholder="Address to Send D1VS to..." />
                                 </div>
                             </div>
                             <br />
@@ -516,15 +859,125 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Referral Link Modal -->
-        <div class="modal" id="referralsModal">
+        <!-- Buy Modal -->
+        <div class="modal" id="buyUSDJModal">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark roundedCorners">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title text-white">Referral Link</h4>
+                        <h4 class="modal-title text-white">Buy USDJ</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="text-success"><b>Buy USDJ with TRX</b></h2>
+                                                <span class="text-white"><i>1 TRX buys <span class="ourBuyRate"></span> USDJ</i></span><br />
+                                                ArcBank has <span id="availUsdBuy" class="availableUsdBuy"></span> USDJ available for Trade
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Send TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyTrx" placeholder="100" value="100" maxlength="32" onkeyup="updateBankBuy(0)" onkeydown="updateBankBuy(0)" autocomplete="off" inputmode="numeric">
+                                                <p class="text-white">Minimum <span class="text-danger">100 TRX</span> Required!</p>
+                                            </div>
+                                            
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Receive USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankBuyUSDJ" placeholder="10" value="10" maxlength="32" onkeyup="updateBankBuy(1)" onkeydown="updateBankBuy(1)" autocomplete="off" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <br />
+                                        
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <div class="col text-center">
+                                                    <a id="buyTokensBtn" class="btn btn-lg btn-buy" onclick="bankBuy()" role="button">INSUFFICIENT FUNDS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Sell USDJ Modal -->
+        <div class="modal" id="sellUSDJModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Buy TRX with USDJ</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                            <div class="col text-center">
+                                                <h2 class="text-danger"><b>Buy TRX with USDJ</b></h2>
+                                                <span class="text-white"><i>1 TRX costs <span class="ourSellRate"></span> USDJ</i></span><br />
+                                                ArcBank has <span id="availTrxBuy" class="availableTrxBuy"></span> available for Trade
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Send USDJ</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellUSDJ" placeholder="2" value="2" maxlength="32" onkeyup="updateBankSell(0)" onkeydown="updateBankSell(0)" autocomplete="off" inputmode="numeric">
+                                                <p class="text-white">Minimum <span class="text-success">2 USDJ</span> Required!</p>
+                                            </div>
+                                            
+                                            <div class="col-sm-6 text-center">
+                                                <label class="text-white">Receive TRX</label>
+                                                <input type="number" class="form-control roundedCorners" id="bankSellTrx" placeholder="1000" value="1000" maxlength="32" onkeyup="updateBankSell(1)" onkeydown="updateBankSell(1)" autocomplete="off" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="approval" class="row" style="display: none;">
+                                            <div id="text" class="col text-center">
+                                                <a class="btn btn-block btn-warning btn-lg roundedCorners" onclick="approveBank()" role="button">APPROVAL REQUIRED</a><br />
+                                            </div>
+                                        </div>
+                                
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a id="sellTokensBtn" class="btn btn-lg btn-sell" onclick="bankSell()" role="button">SELL</a>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Get ArcTag Modal -->
+        <div class="modal" id="getArcTagModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Get an ArcTag</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
@@ -533,13 +986,87 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h3 class="text-white">Here&apos;s your Link</h3>
-                                    <input id="reflink" class="form-control roundedCorners bg-dark text-info" value="" readonly="" />
-                                    <small class="text-white">When others use it to buy in, you get a bonus!</small><br />
-                                    <br />
-                                    <button data-clipboard-target="#reflink" class="btn btn-block btn-sm btn-warning roundedCorners copyButton">Copy Referral Link</button>
+                                    <p class="text-white">
+                                        An ArcTag is your username across the entire of Arcadium Network - the single piece of identity that is tied to your wallet address - your greatest online handle. Make it a good one! Registering an ArcTag costs <b>10 TRX</b> - a small fee to prevent namesquatting, which is collected by the Core Developer Team for maintenance of the platform.
+                                    </p>
                                 </div>
                             </div>
+                            
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3 class="text-white"></h3>
+                                    <label class="text-white">Enter a name: </label>
+                                    <input type="text" name="newUsername" id="newUsername" onchange="checkAvailability()" class="form-control roundedCorners" placeholder="Enter your desired ArcTag" />
+                                    <p class="text-white text-center">
+                                        <b>Max. 12 Letters/numbers, no spaces!</b><br />
+                                        <b>Choose carefully, as your ArcTag cannot be changed!</b>
+                                    </p>
+                                    <br />
+                                    Username Available: <span id="availableStatus" class="text-white"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button onclick="checkAvailability()" class="btn btn-block btn-md btn-warning roundedCorners">Check Availability</button><br />
+                                </div>
+                            </div>
+                            <br />
+                            
+                            <div id="registerButtonArea" class="row" style="display: none;">
+                                <div class="col text-center">
+                                    <button onclick="registerName()" class="btn btn-block btn-md btn-success roundedCorners">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Find Address Modal -->
+        <div class="modal" id="findArcTagModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Find an Address</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <label class="text-white">Address to Check: </label>
+                                            <input class="form-control roundedCorners" type="text" id="addressToCheck" placeholder="Address to Check" />
+                                            <small class="text-white">Enter a TRON Address to find the tag it owns</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row" id="arctagResults">
+                                        <div class="col text-center">
+                                            <h3><span id="checkedAddressTag"></span></h3>
+                                        </div>
+                                    </div>
+                                    <br />
+                                            
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-primary roundedCorners" onclick="getArctag()">Find ArcTag</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
                         </div>
                     </div>
 
@@ -572,7 +1099,7 @@
                             <div class="card-header" id="headingOne">
                                 <h3 class="mb-0 text-white">
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <h4 class="text-white text-center">1: <span class="text-success">Buy D1VS</span></h4>
+                                        <h4 class="text-white text-center">1: <span class="text-success">Invest in the Game</span></h4>
                                     </button>
                                 </h3>
                             </div>
@@ -582,11 +1109,24 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="text-white text-justify">
+                                                <b>D1VS &amp; BTTX</b>
+                                                <p class="text-white text-center">
+                                                    To get started, you will need to buy some D1VS (with TRX), BTTX (with BTT) or both. When you invest, a 10% fee is incurred on your Deposit - this contributes to the Dividends earned by already-existing holders.<br />
+                                                    <br />
                                                     <i class="text-primary">Dividends</i> are paid to those who hold D1VS, so you'll want to <b class="text-success">Buy</b> a decent amount to hold.<br />
                                                     <br />
-                                                    The more D1VS you hold, the larger your "piece of the pie" and the more <i class="text-primary">Dividends</i> you'll earn.
-                                    </p>
+                                                    The more D1VS and BTTX you hold, the larger your "piece of the pie" and the more <i class="text-primary">Dividends</i> you'll earn.
+                                                </p>
+                                                <br />
+                                                <hr />
+                                                <br />
+                                                
+                                                <b>Arcadium Daily</b>
+                                                <p class="text-white text-center">
+                                                    The Arcadium Daily Pool is a great way to ensure you always have a little TRX each day. Every 24 hours, you will receive 3% of your Total Contributions to the Daily Pool, until the pool is empty. Only contributors can earn from the pool, and other Arcadium Network games and dapps will feed the pool in the future, too!<br />
+                                                    <br />
+                                                    Simply enter an amount of TRX to invest, confirm the transaction, and enjoy the daily earnings!
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -603,10 +1143,10 @@
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#howtoAccordion">
                                 <div class="card-body">
-                                    <p class="text-white text-justify">
-                                        As soon as you have some D1VS, you can use your <b class="text-info">Referral Link</b> to bring others into the game.<br />
+                                    <p class="text-white text-center">
+                                        As soon as you have joined the game, you can use your <b class="text-info">Referral Link</b> to bring others in to join the fun! You only need the one link - it's our site, with your wallet address at the end.<br />
                                         <br />
-                                        When they use your link, you get a bonus to your <i class="text-primary">Dividends</i>! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide!
+                                        When others use your link, you get a bonus to your <i class="text-primary">Dividends</i>! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide! Each game has its own Referral bonuses - one link works for them all!
                                     </p>
                                 </div>
                             </div>
@@ -615,16 +1155,16 @@
                             <div class="card-header" id="headingThree">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h4 class="text-white text-center">3: <span class="text-info">Compound D1VS</span></h4>
+                                        <h4 class="text-white text-center">3: <span class="text-info">Compound your Earnings</span></h4>
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#howtoAccordion">
                                 <div class="card-body">
-                                    <p class="text-white text-justify">
-                                        Once you have a good bag of D1VS, you&apos;ll want to start <b class="text-info">Compounding</b> your <i class="text-primary">Dividends</i> - that is, rolling them into more D1VS.<br />
+                                    <p class="text-white text-center">
+                                        Once you have a good bag of D1VS and BTTX, you&apos;ll want to start <b class="text-info">Compounding</b> your <i class="text-primary">earnings</i> - that is, rolling them into more D1VS and BTTX!<br />
                                         <br />
-                                        This will have the effect of growing the size of your <i>&quot;piece of the pie&quot;</i>, thus earning more <i class="text-primary">Dividends</i>, faster!
+                                        This will have the effect of growing your <i>&quot;slice of the pie&quot;</i>, thus earning more <i class="text-primary">Dividends</i>, faster!
                                     </p>
                                 </div>
                             </div>
@@ -633,22 +1173,75 @@
                             <div class="card-header" id="headingFour">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h4 class="text-white text-center">4: <span class="text-danger">Sell D1VS</span></h4>
+                                        <h4 class="text-white text-center">4: <span class="text-danger">Sell Out (???)</span></h4>
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#howtoAccordion">
                                 <div class="card-body">
-                                    <p class="text-white text-justify">
-                                        When it all falls apart on you - when you can&apos;t HODL your D1VS anymore, it&apos;s okay to <b class="text-danger">SELL</b> them! <br />
-                                        <br />
-                                        When you do, you will receive TRX as <i class="text-primary">Dividends</i> to <b class="text-warning">Withdraw</b>.
+                                    <p class="text-white text-center">
+                                        Is it time to sell your D1VS/BTTX? Are you sure? If so, sell them and receive TRX and/or BTT to withdraw to your wallet - then, you&apos;re out of the game!
                                     </p>
-
+                                    <b>Thank you for Playing! We hope you&apos;ll join in again soon!</b>
                                 </div>
                             </div>
                             </div>
                         </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Buy Modal -->
+        <div class="modal" id="contractsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Arcadium Contracts</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left text-white">
+                                    <label><b>USDJ/TRX Bank</b></label>
+                                    <p>This contract enables the USDJ and TRX trade functions which we offer on our website. Liquidity is solely provided by Arcadium Network Core Dev Team.</p>
+                                    <a class="btn btn-block btn-md btn-primary roundedCorners" href="https://tronscan.org/#/contract/TSEGf9jZCzLQMH2PTyF7f7NN3NfrbqHd5p/code" target="_blank">USDJ/TRX Bank</a><br />
+                                    <hr />
+                                    <br />
+                                    <label><b>TRX Hourglass</b></label>
+                                    <p>This is the contract of the D1VS game. Unfortunately, we couldn&apos;t verify the contract via TronScan - we think Deano bumped the space bar somewhere unknown, so it won&apos;t verify... That said, <a href="contracts/TRX_Hourglass.sol" target="_blank">Here is a link</a> to the contract in its raw form, which 100&#37; accurately reflects its functionality.</p>
+                                    <a class="btn btn-block btn-md btn-secondary roundedCorners" href="https://tronscan.org/#/contract/TXf4eo6v5hKRJxY7gLzeyrb9oCdsJoq1zi/code" target="_blank">TRX Hourglass</a>
+                                    <br />
+                                    <hr />
+                                    <br />
+                                    <label><b>BTT Hourglass</b></label>
+                                    <p>This contract is the Smart Contract of BTTX, an hourglass game for BitTorrent Token. It&apos;s source is verified.</p>
+                                    <a class="btn btn-block btn-md btn-success roundedCorners" href="https://tronscan.org/#/contract/TJ3hgteNkAy55e2gSVNj4twZkoKYpKt61N/code" target="_blank">BTT Hourglass</a>
+                                    <br />
+                                    <hr />
+                                    <br />
+                                    <label><b>Daily ROI</b></label>
+                                    <p>This contract powers the Daily ROI component of the platform, and works in conjunction with D1VS.</p>
+                                    <a class="btn btn-block btn-md btn-info roundedCorners" href="https://tronscan.org/#/contract/THQoRfWFa4xRjbWPQjK6wsekS1E9iEQVrg/code" target="_blank">Daily ROI</a>
+                                    <br />
+                                    <hr />
+                                    <br />
+                                    <label><b>ArcTag (User DB)</b></label>
+                                    <p>This contract handles the collection of TRX for registration of ArcTags, and allows the lookup of addresses which own ArcTags. Functionality of this will be built on in the future.</p>
+                                    <a class="btn btn-block btn-md btn-warning roundedCorners" href="https://tronscan.org/#/contract/TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4/code" target="_blank">ArcTag (User DB)</a><br />
                                 </div>
                             </div>
                         </div>
@@ -671,6 +1264,8 @@
         
         <script src="assets/js/alertify.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+        
+        <script src="assets/lib/arcbank/bankmain.js"></script>
         
         <script src="assets/lib/hourglass/trx.js"></script>
         <script src="assets/lib/linkprep.js"></script>

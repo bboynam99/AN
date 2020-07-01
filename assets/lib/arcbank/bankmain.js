@@ -1,6 +1,5 @@
 let tokenAddr = 'TMwFHYXLJaRUPeW6421aqXL4ZEzPRFGkGT'
 let bankAddr = 'TSEGf9jZCzLQMH2PTyF7f7NN3NfrbqHd5p'
-let userdbAddress = 'TZ27Uae32vbz1WshKygJU37dPPrvtVPAr4' // User DB
 let userAddr = ''
 
 let stonk
@@ -86,9 +85,9 @@ async function interfaceLoop() {
             updateBankSell(1)
         }
 
-        $('.trxBalBuy').text((userTrx).toFixed(2) + ' TRX')
+        $('.trxBalBuy').text((userTrx).toFixed(2))
         $('.USDJBalBuy').text(formatDollas(userTokens))
-        $('.trxBalSell').text((userTrx).toFixed(2) + ' TRX')
+        $('.trxBalSell').text((userTrx).toFixed(2))
         $('.USDJBalSell').text(formatDollas(userTokens))
 
         setTimeout(interfaceLoop, 5000)

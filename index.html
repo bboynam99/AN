@@ -9,199 +9,174 @@
 
         <!-- Core CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/arcadium-fx.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/weapon.css">
 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
+    
+    <body class="wallpaper text-white">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark darkNavbar fixed-top">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <body class="is-preload wallpaper">
-        <div class="d-flex" id="wrapper">
-            <!-- Sidebar -->
-            <div class="glassPanel border-light" id="sidebar-wrapper">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <b class="text-white"> // DAPPS</b>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="divs.html"><b><i class="fas fa-chart-line text-danger"></i> D1VS</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="bttx.html"><b><i class="fas fa-dice-d6" style="color: #ffff00;"></i> BTTX</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="daily.html"><b><i class="fas fa-tint text-primary"></i> DAILY</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="arcbank.html"><b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="pyropress.html"><b><i class="fas fa-fire" style="color: #ff8900;"></i> PYROPRESS</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="goactdivs.html"><b><i class="fas fa-users" style="color: #ff0000;"></i> GOACT D1VS</b></a>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bookmark text-primary"></i> Review
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank">DappStats</a>
+                                <a class="dropdown-item" href="https://dapp.review/dapp/13081" target="_blank">DappReview</a>
+                                <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank">StateOfTheDapps</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/Arcadium-Network" target="_blank"><i class="fab fa-github text-primary"></i> GitHub</a></li>
+                    </ul>
                 </div>
-                <br />
-                <b class="text-white"> // REVIEW</b>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank"><b><i class="fas fa-bookmark text-white"></i> DappStats</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://dapp.review/dapp/13081" target="_blank"><b><i class="fas fa-bookmark text-white"></i> DappReview</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank"><b><i class="fas fa-bookmark text-white"></i> StateOfTheDapps</b></a>
-                </div>
-                <br />
-                <b class="text-white"> // RESOURCES</b>
-                <div class="list-group list-group-flush">
-                    <a href="https://github.com/Arcadium-Network" target="_blank" class="list-group-item list-group-item-action glassButton text-white"><i class="fab fa-github text-info"></i>  GitHub</a>
-                </div>
-                <br />
-            </div>
-            <!-- /#sidebar-wrapper -->
-
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <!-- NAVBAR -->
-                <nav class="navbar navbar-expand-lg navbar-dark border-light fixed-top" style="background-color: #000;">
-                    <div class="navbar-brand text-white"><a href="index.html"><img src="assets/img/logo.png" width="40px" /></a></div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <br /><br /><br /><br /><br /><br />
-                
-                <!-- MAIN CONTAINER -->
+            </nav>
+            
+            <div class="jumbotron glassPanel text-light" style="padding-top: 150px;">
                 <div class="container">
-                    <!-- Header Row -->
-                    <div class="row">
-                        <div class="container">
-                            <div class="row jumbotron glassPanel whiteBorder roundedCorners animated fadeInDown">
-                                <div class="col text-center">
-                                    <h1 class="text-white">Arcadium Network</h1>
-                                    <p class="text-muted"><i>High-Risk Games and Dapps on TRON</i></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="row">
                         <div class="col text-center">
-                            <div class="alert alert-dismissible arcOrange text-white roundedCorners">
-                                <a href="arctag.html" class="text-white"><strong>NEW: </strong> Get an ArcTag - your username across Arcadium Network!</a>
-                            </div>
+                            
+                            <h1 class="arcadiumFont">Arcadium Network</h1>
+                            <p>Save your Crypto and earn Dividends</p>
                         </div>
                     </div>
-                    <br />
-                    
-                    <!-- Dapps Row -->
-                    <div class="row">
-                        <div class="col-md-4 text-center animated fadeInDown delay-1s">
-                            <a href="divs.html"><img src="assets/img/internal/D1VS.png" class="silverBorder roundedCorners" width="100%" /></a><br /><br />
-                        </div>
-
-                        <div class="col-md-4 text-center animated fadeInDown delay-1s">
-                            <a href="bttx.html"><img src="assets/img/internal/BTTX.png" class="redBorder roundedCorners" width="100%" /></a><br /><br />
-                        </div>
-
-                        <div class="col-md-4 text-center animated fadeInDown delay-1s">
-                            <a href="daily.html"><img src="assets/img/internal/DAILY.png" class="blueBorder roundedCorners" width="100%" /></a><br /><br />
-
-                        </div>
-
-                        <div class="col-md-4 text-center animated fadeInDown delay-2s">
-                            <a href="arcbank.html"><img src="assets/img/internal/ARCBANK.png" class="greenBorder roundedCorners" width="100%" /></a><br /><br />
-                        </div>
-
-                        <div class="col-md-4 text-center animated fadeInDown delay-2s">
-                            <a href="goactdivs.html"><img src="assets/img/internal/GOACTDIVS.png" class="orangeBorder roundedCorners" width="100%" /></a><br /><br />
-                        </div>
-
-                        <div class="col-md-4 text-center animated fadeInDown delay-2s">
-                            <a href="pyropress.html"><img src="assets/img/internal/PYROPRESS.png" class="yellowBorder roundedCorners" width="100%" /></a><br /><br />
-                        </div>
-                    </div>
-                    <br />
-                    
-                    <div class="row">
-                        <div class="col text-center">
-                            <br /><br />
-                            <h3 class="text-white">Want More?</h3>
-                            <i class="text-white">Join the network on these Social Media channels!</i><br />
-                            <a class="btn btn-sm btn-primary roundedCorners text-white" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter"></i><b> Twitter</b></a> 
-                            <a class="btn btn-sm btn-success roundedCorners text-white" href="https://t.me/ArcadiumNetwork" target="_blank"><i class="fab fa-telegram-plane"></i><b> Telegram</b></a> 
-                            <a class="btn btn-sm btn-warning roundedCorners text-white" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord"></i><b> Discord</b></a>
-                            <br />
-                            <br />
-                        </div>
-                    </div>
-                    <hr />
-                    <br />
-                    <!-- Review Page Row -->
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <br />
-                            <br />
-                            <br />
-                            <img src="assets/img/external/stateofthedapps.png" width="140px" height="140px" /><br />
-                            <br />
-                            <h4 class="text-white">Listed on StateOfTheDapps</h4>
-                            <a class="btn btn-sm btn-primary roundedCorners" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank">Write a Review</a>
-                            <a class="btn btn-sm btn-dark roundedCorners" href="https://www.stateofthedapps.com/" target="_blank">View More Dapps</a><br />
-                            <br />
-                        </div>
-                
-                        <div class="col-md-4 text-center">
-                            <br />
-                            <img src="assets/img/external/dappstats.png" width="auto" height="120px" /><br />
-                            <br />
-                            <h4 class="text-white">Listed on DappStats</h4>
-                            <a class="btn btn-sm btn-primary roundedCorners" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank">Write a Review</a>
-                            <a class="btn btn-sm btn-dark roundedCorners" href="https://www.dappstats.com/" target="_blank">View More Dapps</a><br />
-                            <br />
-                        </div>
-                
-                        <div class="col-md-4 text-center">
-                            <br />
-                            <br />
-                            <br />
-                            <img src="assets/img/external/dappreview.jpg" width="140px" height="140px" /><br />
-                            <br />
-                            <h4 class="text-white">Listed on DappReview</h4>
-                            <a class="btn btn-sm btn-primary roundedCorners" href="https://dapp.review/dapp/13081" target="_blank">Write a Review</a>
-                            <a class="btn btn-sm btn-dark roundedCorners" href="https://dapp.review/" target="_blank">View More Dapps</a>
-                        </div>
-                    </div>
-                    <br />
-                    
-                    <div class="row">
-                        <div class="col text-center">
-                            <small class="text-white">
-                                <i>Arcadium Network is not endorsed nor sponsored by any listings, media mention or otherwise.</i>
-                            </small>
-                        </div>
-                    </div>
-                    <br />
                 </div>
-                
-                <button class="floatingButton" id="menu-toggle" style="z-index: 1"><img src="assets/img/logo.png" width="50px" /></button>
             </div>
-            <!-- /#page-content-wrapper -->
-
-        </div>
+        </header>
         
-        <footer class="py-5 px-5 glassPanel roundedCorners text-white">
-            <div class="row">
-                <div class="col text-center">
-                    <b>The Fine Print</b>
-                    <small class="d-block mb-3 text-muted">
-                        This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
-                        Only invest with TRX which you can afford to lose. Using any of the aforementioned constitutes agreement with this statement.<br />
-                        Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.
-                    </small>
+        <main>
+            <div class="container">
+                <!-- Dapps Row -->
+                <div class="row">
+                    <div class="col text-center">
+                        <a href="divs.html" class="btn btn-block btn-lg btn-success roundedCorners">Go to Dashboard</a><br />
+                    </div>
+                        
+                    <div class="col text-center">
+                        <a class="btn btn-block btn-md btn-info roundedCorners" data-toggle="modal" data-target="#guideModal">How to Play</a>
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="assets/img/home/money.png" width="100px" height="100px" /><br />
+                        <h4>Invest in the Game</h4>
+                        <p>Show your strong hands with our TRX &amp; BTT Hourglasses - a 10&#37; fee on every Buy and Sell creates Dividends for holders, and every transaction aids in price fluctuation!</p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <img src="assets/img/home/compound.png" width="100px" height="100px" /><br />
+                        <h4>Compound your Earnings</h4>
+                        <p>When you get earnings, you can strengthen your position in the game - The more D1VS and BTTX you have, the more earnings you get when others play!</p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <img src="assets/img/home/withdraw.png" width="100px" height="100px" /><br />
+                        <h4>Get Dividends</h4>
+                        <p>Whenever you are ready, you can sell your D1VS and BTTX, and withdraw TRX &amp; BTT directly to your wallet! The question is, <i>Do you sell now?</i></p>
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <br />
+                
+                <div class="row">
+                    <div class="col text-center animated fadeInDown delay-2s">
+                        <br /><br />
+                        <h3 class="text-white">Want More?</h3>
+                        <i class="text-white">Join the network on these Social Media channels!</i><br />
+                        <a class="btn btn-sm btn-primary roundedCorners text-white" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter"></i><b> Twitter</b></a> 
+                        <a class="btn btn-sm btn-success roundedCorners text-white" href="https://t.me/ArcadiumNetwork" target="_blank"><i class="fab fa-telegram-plane"></i><b> Telegram</b></a> 
+                        <a class="btn btn-sm btn-warning roundedCorners text-white" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord"></i><b> Discord</b></a>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <br />
+                
+                <!-- Review Page Row -->
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <br />
+                        <br />
+                        <br />
+                        <img src="assets/img/external/stateofthedapps.png" width="140px" height="140px" /><br />
+                        <br />
+                        <h4 class="text-white">Listed on StateOfTheDapps</h4>
+                        <a class="btn btn-sm btn-primary roundedCorners" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank">Write a Review</a>
+                        <a class="btn btn-sm btn-dark roundedCorners" href="https://www.stateofthedapps.com/" target="_blank">View More Dapps</a><br />
+                        <br />
+                    </div>
+                
+                    <div class="col-md-4 text-center">
+                        <br />
+                        <img src="assets/img/external/dappstats.png" width="auto" height="120px" /><br />
+                        <br />
+                        <h4 class="text-white">Listed on DappStats</h4>
+                        <a class="btn btn-sm btn-primary roundedCorners" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank">Write a Review</a>
+                        <a class="btn btn-sm btn-dark roundedCorners" href="https://www.dappstats.com/" target="_blank">View More Dapps</a><br />
+                        <br />
+                    </div>
+                
+                    <div class="col-md-4 text-center">
+                        <br />
+                        <br />
+                        <br />
+                        <img src="assets/img/external/dappreview.jpg" width="140px" height="140px" /><br />
+                        <br />
+                        <h4 class="text-white">Listed on DappReview</h4>
+                        <a class="btn btn-sm btn-primary roundedCorners" href="https://dapp.review/dapp/13081" target="_blank">Write a Review</a>
+                        <a class="btn btn-sm btn-dark roundedCorners" href="https://dapp.review/" target="_blank">View More Dapps</a>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <div class="jumbotron glassPanel roundedCorners">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <b>The Fine Print</b>
+                                <small class="d-block mb-3 text-white">
+                                    This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                                    Only invest with cryptocurrencies which you can afford to lose. Using Arcadium Network, its website or services constitutes agreement with this statement.<br />
+                                    Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.<br />
+                                    <br />
+                                    <b>Please remember, this is a GAME, not an investment platform! You are responsible for your own investments and losses!</b>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br />
-            <br />
         </footer>
+        <br />
+        <br />
+        <br />
         
         <!-- Bottom Nav -->
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
@@ -211,17 +186,135 @@
             </ul>
         </nav>
         
+        <!-- Guide Modal -->
+        <div class="modal" id="guideModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">How to Play</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <div class="accordion" id="howtoAccordion">
+                        <div class="card glassPanel rcTop">
+                            <div class="card-header" id="headingOne">
+                                <h3 class="mb-0 text-white">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="text-white text-center">1: <span class="text-success">Invest in the Game</span></h4>
+                                    </button>
+                                </h3>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>D1VS &amp; BTTX</b>
+                                                <p class="text-white text-center">
+                                                    To get started, you will need to buy some D1VS (with TRX), BTTX (with BTT) or both. When you invest, a 10% fee is incurred on your Deposit - this contributes to the Dividends earned by already-existing holders.<br />
+                                                    <br />
+                                                    <i class="text-primary">Dividends</i> are paid to those who hold D1VS, so you'll want to <b class="text-success">Buy</b> a decent amount to hold.<br />
+                                                    <br />
+                                                    The more D1VS and BTTX you hold, the larger your "piece of the pie" and the more <i class="text-primary">Dividends</i> you'll earn.
+                                                </p>
+                                                <br />
+                                                <hr />
+                                                <br />
+                                                
+                                                <b>Arcadium Daily</b>
+                                                <p class="text-white text-center">
+                                                    The Arcadium Daily Pool is a great way to ensure you always have a little TRX each day. Every 24 hours, you will receive 3% of your Total Contributions to the Daily Pool, until the pool is empty. Only contributors can earn from the pool, and other Arcadium Network games and dapps will feed the pool in the future, too!<br />
+                                                    <br />
+                                                    Simply enter an amount of TRX to invest, confirm the transaction, and enjoy the daily earnings!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h4 class="text-white text-center">2: <span class="text-primary">Refer Others</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <p class="text-white text-center">
+                                        As soon as you have joined the game, you can use your <b class="text-info">Referral Link</b> to bring others in to join the fun! You only need the one link - it's our site, with your wallet address at the end.<br />
+                                        <br />
+                                        When others use your link, you get a bonus to your <i class="text-primary">Dividends</i>! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide! Each game has its own Referral bonuses - one link works for them all!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h4 class="text-white text-center">3: <span class="text-info">Compound your Earnings</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <p class="text-white text-center">
+                                        Once you have a good bag of D1VS and BTTX, you&apos;ll want to start <b class="text-info">Compounding</b> your <i class="text-primary">earnings</i> - that is, rolling them into more D1VS and BTTX!<br />
+                                        <br />
+                                        This will have the effect of growing your <i>&quot;slice of the pie&quot;</i>, thus earning more <i class="text-primary">Dividends</i>, faster!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glassPanel rcBottom">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <h4 class="text-white text-center">4: <span class="text-danger">Sell Out (???)</span></h4>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#howtoAccordion">
+                                <div class="card-body">
+                                    <p class="text-white text-center">
+                                        Is it time to sell your D1VS/BTTX? Are you sure? If so, sell them and receive TRX and/or BTT to withdraw to your wallet - then, you&apos;re out of the game!
+                                    </p>
+                                    <b>Thank you for Playing! We hope you&apos;ll join in again soon!</b>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
         <!-- Bootstrap core JavaScript -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-
-        <!-- Menu Toggle Script -->
-        <script>
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        </script>
+        
+        <!-- Dapp JS -->
+        <script src="assets/lib/username.js"></script>
     </body>
 </html>

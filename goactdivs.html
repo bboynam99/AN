@@ -36,7 +36,6 @@
                     <a class="list-group-item list-group-item-action glassButton text-white" href="daily.html"><b><i class="fas fa-tint text-primary"></i> DAILY</b></a>
                     <a class="list-group-item list-group-item-action glassButton text-white" href="arcbank.html"><b><i class="fas fa-dollar-sign" style="color: #00ff0a;"></i> ARCBANK</b></a>
                     <a class="list-group-item list-group-item-action glassButton text-white" href="pyropress.html"><b><i class="fas fa-fire" style="color: #ff8900;"></i> PYROPRESS</b></a>
-                    <a class="list-group-item list-group-item-action glassButton text-white" href="goactdivs.html"><b><i class="fas fa-users" style="color: #ff0000;"></i> GOACT D1VS</b></a>
                 </div>
                 <br />
                 <b class="text-white"> // REVIEW</b>
@@ -91,97 +90,36 @@
                     
                     <div class="row">
                         <div class="col text-center">
-                            <a class="btn btn-block btn-md btn-dark btn-outline-danger text-white roundedCorners" href="https://poloniex.org/exchange?id=39" target="_blank">Trade GOACT on Poloniex</a>
-                        </div>
-                    </div>
-                    <br />
-                    
-                    <div class="row">
-                        <div class="col-md-6">
                             <div class="card-body glassPanel silverBorder roundedCorners">
                                 <div class="row">
                                     <div class="col text-center">
                                         <h2 class="display-5 text-white">
                                             <img src="assets/img/gdivs.png" width="30px" /> <span class="user-token-balance">0.00</span> GD1VS
                                         </h2>
-                                        <small class="text-muted"><i>YOUR BALANCE</i></small>
+                                        <small class="text-muted"><i>Worth <span id="user-trx-balance"></span> GOACT</i></small>
                                     </div>
                                     
-                                    <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/goact.png" width="30px" /> <span id="user-trx-balance"></span> GOACT
-                                        </h6>
-                                        <small class="text-muted"><i>GOACT VALUE</i></small>
-                                    </div>
-                                </div>
-                                <br />
-                                
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-md btn-success btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#buyModal">
-                                            <i class="fas fa-coins"></i> Buy GD1VS
-                                        </button>
-                                    </div>
-                                                
-                                    <div class="col text-center">
-                                        <button class="btn btn-block btn-md btn-danger btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#sellModal">
-                                            <i class="fas fa-dollar-sign"></i> Sell GD1VS
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <br />
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="card-body glassPanel silverBorder roundedCorners">
-                                <div class="row">
                                     <div class="col text-center">
                                         <h2 class="display-5 text-white">
                                             <img src="assets/img/goact.png" width="30px" /> <span class="user-dividends">0.00</span> GOACT
                                         </h2>
                                         <small class="text-muted"><i>YOUR EARNINGS</i></small>
                                     </div>
-                                    
-                                    <div class="col text-center">
-                                        <h6 class="display-5 text-white">
-                                            <img src="assets/img/gdivs.png" width="30px" /> <span id="user-reinvest"></span> GD1VS
-                                        </h6>
-                                        <small class="text-muted"><i>GD1VS VALUE</i></small>
-                                    </div>
                                 </div>
                                 <br />
                                 
-                                <div class="row">
+                                <div class="row">  
                                     <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-md btn-dark btn-outline-info roundedCorners text-white btn-reinvest"><i class="fas fa-recycle"></i> Compound</button>
+                                        <button class="btn btn-block btn-md btn-danger btn-outline-dark roundedCorners text-white" data-toggle="modal" data-target="#sellModal">
+                                            <i class="fas fa-dollar-sign"></i> Sell GD1VS
+                                        </button>
                                     </div>
-                                                
+                                    
                                     <div class="col text-center">
                                         <button class="btn btn-block btn-md btn-dark btn-outline-warning roundedCorners text-white btn-withdraw"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <input id="reflink" class="form-control roundedCorners bg-dark text-info" value="" readonly=""><br />
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <button class="btn btn-block btn-md btn-info roundedCorners text-white copyButton" data-clipboard-target="#reflink"><i class="fas fa-users"></i> Copy Link</button>
-                            <br />
-                        </div>
-                        <div class="col text-center">
-                                <p class="mb-0 text-white"><button class="btn btn-block btn-md btn-primary roundedCorners text-white" data-toggle="modal" data-target="#guideModal" aria-hidden="true"><i class="fas fa-gamepad"></i> How to Play</button></p>
-
-                            <br />
-                        </div>
-                        <div class="col text-center">
-                                <p class="mb-0 text-white"><button class="btn btn-block btn-md btn-dark roundedCorners text-white" data-toggle="modal" data-target="#faqModal" aria-hidden="true"><i class="fas fa-info"></i> How it Works</button></p>
-
                             <br />
                         </div>
                     </div>
