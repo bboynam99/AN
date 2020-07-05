@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="ARC3D - Arcadium Network">
+        <meta name="author" content="Arcadium Network">
+        <title>ARC3D | Arcadium Network</title>
+
+        <!-- Core CSS 1     --><link rel="stylesheet" href="assets/css/alertify.css">
+        <!-- Core CSS 1     --><link rel="stylesheet" href="assets/css/alertify_themes/bootstrap.min.css">
+        
+        <!-- Core CSS 1     --><link rel="stylesheet" href="assets/css/bootstrap.css">
+        <!-- Core CSS 2     --><link rel="stylesheet" href="assets/css/theme.css">
+        <!-- Google Fonts   --><link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <!-- FontAwesome    --><script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+        
+        <script>
+            function whenAvailable(name, callback) {
+                var interval = 10;
+                window.setTimeout(function() {
+                    if (window[name]) {callback(window[name]);} else {window.setTimeout(arguments.callee, interval);}
+                }, interval);
+            }
+        </script>
+    </head>
+    
+    <body class="is-preload wallpaper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark darkNavbar fixed-top">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="divs.html">
+                                <img src="assets/img/tron.png" width="20px" height="20px" /> DAILY D1VS (TRX)
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="arc3d.html">
+                                <img src="assets/img/eth.png" width="20px" height="20px" /> ARC3D (ETH)
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bookmark text-primary"></i> Review
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.dappstats.com/dapp/arcadium-d1vs" target="_blank">DappStats</a>
+                                <a class="dropdown-item" href="https://dapp.review/dapp/13081" target="_blank">DappReview</a>
+                                <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/arcadium-d1vs" target="_blank">StateOfTheDapps</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/ztNcbm3" target="_blank"><i class="fab fa-discord text-primary"></i> Discord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumTRX" target="_blank"><i class="fab fa-twitter text-primary"></i> Twitter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/Arcadium-Network" target="_blank"><i class="fab fa-github text-primary"></i> GitHub</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main style="padding-top: 100px;">
+            <div class="container">
+                <div class="jumbotron glassPanel roundedCorners text-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h1>
+                                    <img src="assets/img/logo.png" width="35px" height="35px" /> ARC3D <img src="assets/img/logo.png" width="35px" height="35px" />
+                                </h1>
+                                <p><i>Arcadium Network&apos;s Hourglass Game on ETH</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-block btn-md btn-primary roundedCorners" href="#" data-toggle="modal" data-target="#guideModal">How to Play</a><br />
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <a class="btn btn-block btn-md btn-info roundedCorners" href="#" data-toggle="modal" data-target="#contractsModal">View Contracts</a><br />
+                    </div>
+                </div>
+                
+                <div class="row exchange">
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners text-white">
+                            <div class="card-header"><h4><i class="fas fa-wallet text-muted"></i> My Wallet</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <h3><img src="assets/img/logo.png" width="30px" height="30px" /> <span class="balance"></span> ARC3D</h3>
+                                            <span class="value"></span> ETH ($<span class="value-usd"></span> USD)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#buyTokensModal">Buy</button>
+                                    </div>
+                                
+                                    <div class="col">
+                                        <button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#sellTokensModal">Sell</button>
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <button type="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#transferTokensModal">Transfer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners text-white">
+                            <div class="card-header"><h4><i class="fas fa-hand-holding-usd text-muted"></i> My Dividends</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <h3><img src="assets/img/eth.png" width="30px" height="30px" /> <span class="div"><img src="./assets/img/loader.svg"></span> ETH</h3>
+                                            <small>$<span class="div-usd"><img src="./assets/img/loader.svg"></span> USD Value</small>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <h3><img src="assets/img/eth.png" width="30px" height="30px" /> <span id="refdiv"></span> ETH</h3>
+                                            <small>From Referrals</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer text-white">
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="reinvest-btn" class="btn btn-block btn-dark btn-outline-success text-white" type="button"><i class="fas fa-recycle"></i> Reinvest</button>
+                                    </div>
+                                
+                                    <div class="col">
+                                        <button id="withdraw-btn" class="btn btn-block btn-dark btn-outline-danger text-white" type="button"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners text-white">
+                            <div class="card-header"><h4><i class="fas fa-dollar-sign text-muted"></i> Price Floor <small>(<a href="#" data-toggle="modal" data-target="#pricefloorHelpModal"><i class="fas fa-question"></i></a>)</small></h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h4><span id="pricefloorTokens">0.00000</span> ARC3D</h4>
+                                            <small>Locked to Price Floor</small>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <h4><span id="pricefloorDivs">0.00000</span> ETH</h4>
+                                            <small>Ready to Lock</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                    <div class="col">
+                                        <button id="raisefloor" class="btn btn-block btn-success text-white" type="button"><i class="fas fa-arrow-up"></i> Raise Floor</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card glassPanel roundedCorners text-white">
+                            <div class="card-header"><h4><i class="fas fa-users text-muted"></i> Referrals</h4></div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h4><span id="refUseCount">0</span> Purchases</h4>
+                                            <small>Made with your Referral Link</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <a id="copy-etc-address" data-clipboard-text="" class="btn btn-block btn-secondary" href="#"><strong>Tap to copy Referral Link</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="card glassPanel roundedCorners">
+                            <div class="card-header text-white rcTop"><i class="fas fa-chart-bar"></i> ARC3D Stats</div>
+                            <div class="card-body text-white">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <img src="assets/img/logo.png" width="40px" height="40px" /><br />
+                                        <br />
+                                        <b><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> ARC3D</b><br />
+                                        <small>Current Supply</small>
+                                    </div>
+                                
+                                    <div class="col text-center">
+                                        <img src="assets/img/eth.png" width="40px" height="40px" /><br />
+                                        <br />
+                                        <b><span class="contract-balance"><img src="./assets/img/loader.svg"></span> ETH</b><br />
+                                        <small>Contract Holdings</small>
+                                    </div>
+                                
+                                    <div class="col text-center">
+                                        <img src="assets/img/dollar.png" width="40px" height="40px" /><br />
+                                        <br />
+                                        <b><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></b><br />
+                                        <small>Market Cap</small>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="card-footer text-white text-center rcBottom">
+                                
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <div class="jumbotron glassPanel roundedCorners">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-white text-center">
+                                <b>The Fine Print</b>
+                                <small class="d-block mb-3">
+                                    This Dapp, its connected Smart Contract and its dependencies &amp; productions are provided on an &quot;as-is&quot; basis, and with <b class="text-danger">no guarantee of profit or gain</b>.<br />
+                                    Only invest with cryptocurrencies which you can afford to lose. Using Arcadium Network, its website or services constitutes agreement with this statement.<br />
+                                    Developers, Members, Participants or other affiliated parties will not be held responsible for any losses you may incur.<br />
+                                    <br />
+                                    <b>Please remember, this is a GAME, not an investment platform! You are responsible for your own investments and losses!</b>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <br />
+        <br />
+        <br />
+        
+        <!-- Bottom Nav -->
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
+            <ul class="navbar-nav mr-auto ml-auto">
+                <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                <coingecko-coin-price-marquee-widget  coin-ids="tron,bittorrent-2,just-stablecoin" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
+            </ul>
+        </nav>
+        
+        <!-- Modals -->
+        <div class="modal" id="buyTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content blackPanel text-white">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Buy ARC3D</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img src="assets/img/eth.png" width="30px" height="30px" />
+                                    <h4 class="text-white">Price: <span class="buy"><img src="./assets/img/loader.svg"></span> ETH</h4>
+                                    <p><span class="buy-usd"><img src="./assets/img/loader.svg"></span></p>
+                                    <label><b>ETH to Spend: </b></label>
+                                    <input id="purchase-amount" class="form-control" type="text" placeholder="ETH to Spend..."/>
+                                    <p id="deposit-hint"></p>
+                                    <button id="buy-tokens" class="btn btn-block btn-md btn-success" type="button"><i class="fas fa-plus"></i> Buy ARC3D</button>
+                                    <small>Enter an amount of ETH to purchase ARC3D with. A 10&#37; Dividend Fee is deducted from all deposits -  when you hold ARC3D, you earn Dividends from other player&apos;s subsequent transactions (Buy/Sell/Transfer).</small>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="button" class="btn btn-block btn-md btn-dark" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="sellTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content blackPanel text-white">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Sell ARC3D</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img src="assets/img/eth.png" width="30px" height="30px" />
+                                    <h4 class="text-white"><span class="sell"><img src="./assets/img/loader.svg"></span> ETH</h4>
+                                    <p><span class="sell-usd"><img src="./assets/img/loader.svg"></span></p>
+                                    <input id="sell-tokens-amount" class="form-control" type="text" placeholder="ARC3D to Sell..."/>
+                                    <p id="withdraw-hint"></p>
+                                    <button id="sell-tokens-btn" class="btn btn-block btn-md btn-danger text-white" type="button"><i class="fas fa-minus"></i> Sell ARC3D</button>
+                                    
+                                    <small>Enter an amount of ARC3D to sell for ETH. A 10&#37; Dividend Fee is applied to the the total value of your sell. When you sell ARC3D, your ETH is added to Dividends, so you will need to withdraw them to your wallet.</small>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="button" class="btn btn-block btn-md btn-dark" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="transferTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content blackPanel text-white">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Transfer ARC3D</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 text-left">
+                                    <label><b>Transfer Amount</b></label>
+                                    <input id="transfer-tokens" class="form-control" type="text" placeholder="ARC3D to Send..."/><br />
+                                </div>
+                                
+                                <div class="col-md-8 text-left">
+                                    <label><b>Transfer Recipient</b></label>
+                                    <input id="transfer-address" class="form-control" type="text" placeholder="Recipient Address"/>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button id="transfer-tokens-btn" class="btn btn-block btn-warning text-black" type="button"><i class="fas fa-arrow-right"></i> Transfer Tokens</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="button" class="btn btn-block btn-md btn-dark" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="guideModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">How to Play</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-white text-left">
+                                    <h4>1: Invest in the Game</h4>
+                                    <p>
+                                        To get started, you will need to buy some ARC3D using ETH. When you invest, a 10% fee is incurred on your Deposit - this contributes to the Dividends earned by already-existing holders.<br />
+                                        <br />
+                                        <i class="text-primary">Dividends</i> are paid to those who hold ARC3D, so you'll want to <b class="text-success">Buy</b> a decent amount to hold.<br />
+                                        <br />
+                                        The more ARC3D you hold, the larger your "piece of the pie" and the more <i class="text-primary">ETH Dividends</i> you'll earn!
+                                    </p>
+                                    <br />
+                                    <hr />
+                                    
+                                    <h4>2: Refer Others to Play</h4>
+                                    <p>
+                                        Once you have some ARC3D, you can use your <b class="text-info">Referral Link</b> to bring others in to join the fun! You only need the one link - it's our site, with your wallet address at the end.<br />
+                                        <br />
+                                        When others use your link, you get a bonus to your <i class="text-primary">ETH Dividends</i>! Just the same, they can also refer others with their link - so you should refer with your link fast, far and wide!
+                                    </p>
+                                    <br />
+                                    <hr />
+                                    
+                                    <h4>3: Compound your Earnings</h4>
+                                    <p>
+                                        Once you have a good HODL of ARC3D, you&apos;ll want to start <b class="text-info">Compounding</b> your <i class="text-primary">earnings</i> - that is, rolling them into more ARC3D!<br />
+                                        <br />
+                                        This will have the effect of growing your <i>&quot;slice of the pie&quot;</i>, thus earning more <i class="text-primary">Dividends</i>, faster!
+                                    </p>
+                                    <br />
+                                    <hr />
+                                    
+                                    <h4>4: Sell Out (???)</h4>
+                                    <p>
+                                        Is it time to sell your ARC3D? Are you sure? If so, sell them and receive ETH to withdraw to your wallet - then, you&apos;re out of the game!
+                                    </p>
+                                    <br />
+                                    <hr />
+                                    
+                                    <b>Thank you for Playing! We hope you&apos;ll join in again soon!</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="contractsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Arcadium Contracts</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left text-white">
+                                    <label><b>ARC3D Hourglass</b></label>
+                                    <p>This contract is the core of the game, where ETH is held for the ARC3D that is created. The code is verified on Etherscan - click the button to view it and learn more.</p>
+                                    <a class="btn btn-block btn-md btn-primary roundedCorners" href="https://etherscan.io/address/0xa3a143c94134fd5dc535d93c27261ecea53bb568" target="_blank">ARC3D Hourglass</a>
+                                    <hr />
+                                    <label><b>Pricefloor</b></label>
+                                    <p>This is a copy of &quot;RainMaker&quot; by <a href="https://commonwealth.gg" target="_blank">Commonwealth.gg</a> - It holds ARC3D, and earns Dividends. When the Floor is raised, the Minimum value of the last token rises - this will grow larger over time, because the Pricefloor can never sell, transfer or destroy its ARC3D, and it can never be withdrawn from by <i>anyone</i>. </p>
+                                    <a class="btn btn-block btn-md btn-secondary roundedCorners" href="https://etherscan.io/address/0xb0ad7c78bebeab28019789c89e82a2d1f227105a#code" target="_blank">Pricefloor</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="pricefloorHelpModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Price Floor</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left text-white">
+                                    <p>
+                                        The Price Floor is a copy of &quot;RainMaker&quot; by <a href="https://commonwealth.gg" target="_blank">Commonwealth.gg</a> - It holds ARC3D, and earns Dividends. When the Floor is raised, the Minimum value of the last token rises - this will grow larger over time, because the Pricefloor can never sell, transfer or destroy its ARC3D, and it can never be withdrawn from by <i>anyone</i>.<br />
+                                        <br />
+                                        Anyone can Raise the floor - the only bonus however is guaranteeing a minimum sell value for the last ARC3D token, which helps to ensure game longevity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+    <!-- Scripts -->
+    <!-- Bootstrap 4 and dependencies -->
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- Site-Specific dependencies -->
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/tether.min.js"></script>
+    <script src="assets/js/common.min.js"></script>
+    <script src="assets/js/d3.v5.min.js"></script>
+    <script src="assets/js/alertify.min.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/lodash.min.js"></script>
+    <script src="assets/js/web3.js"></script>
+    
+    <!-- Contract Scripts -->
+    <script type="text/javascript" src="assets/lib/eth/shared.js"></script>
+    <script type="text/javascript" src="assets/lib/eth/ARC3D_Token.etc.js"></script>
+    <script type="text/javascript" src="assets/lib/eth/ARC3D_Masternode.etc.js"></script>
+    <script type="text/javascript" src="assets/lib/eth/ARC3D_Plugin_contracts.js"></script>
+</html>
