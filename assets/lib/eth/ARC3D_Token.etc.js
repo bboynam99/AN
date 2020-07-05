@@ -89,6 +89,21 @@ function getPriceFloorInfo() {
 function convertEthToWei (e) {return 1e18 * e}
 function convertWeiToEth (e) {return e / 1e18}
 
+window.addEventListener('load', async () => {
+    if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+            await ethereum.enable();
+        } catch (error) {
+            
+        }
+    } else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider);
+    } else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+    }
+});
+
 function detectWeb3 () {
     if (typeof web3 !== 'undefined') {
         web3js = new Web3(web3.currentProvider)
